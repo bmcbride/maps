@@ -54,4 +54,12 @@
   "size": "522 KB",
   "projection": ["EPSG:26919","+proj=utm +zone=19 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"],
   "extent": [541009.229, 4895918.419, 569934.104, 4922556.839]
+}, {
+  "name": "Peebles Island State Park",
+  "description": "Peebles Island State Park is at the confluence of the Hudson and Mohawk Rivers.",
+  "attribution": "<a href=\"https://parks.ny.gov/parks/111\">NYS Parks</a>",
+  "url": "maps/PeeblesIslandTrailMap.jpg",
+  "size": "373 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [606924.179, 4736450.650, 608182.475, 4738395.599]
 }]
