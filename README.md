@@ -15,6 +15,6 @@ https://bmcbride.github.io/maps/
 
 ## Screenshots
 
-![Lists](https://bmcbride.github.io/maps/screenshots/lists.png)
+![Lists](screenshots/lists.png "Map Lists")
 
-![Maps](https://bmcbride.github.io/maps/screenshots/maps.png)
+![Maps](screenshots/maps.png "Map View")
