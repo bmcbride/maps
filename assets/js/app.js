@@ -32,10 +32,14 @@ var app = new Framework7({
       on: {
         closed: function() {
           $$("#map-title").html("");
+          app.geolocation.setTracking(false);
           app.layers.image.setVisible(false);
           app.map.render();
           app.navbar.show(".navbar", false);
           $$(".navbar~.page-content").css("padding-top", "56px");
+        },
+        opened: function() {
+          app.geolocation.setTracking(true);
         }
       }
     }
@@ -125,7 +129,6 @@ app.styles = {
 };
 
 app.geolocation = new ol.Geolocation({
-  tracking: true,
   trackingOptions: {
     maximumAge: 10000,
     enableHighAccuracy: true,
