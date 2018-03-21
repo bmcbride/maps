@@ -48,11 +48,17 @@ var app = new Framework7({
     init: function() {
       loadSavedMaps();
       loadAvailableMaps();
-      if (window.location.hash.substr(2) == "/map/" && sessionStorage.getItem("settings")) {
-        var settings = JSON.parse(sessionStorage.getItem("settings"));
-        setMap(settings.activeLayer, settings);
-        if (settings.basemap) {
-          $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
+      if (window.location.hash.substr(2) == "/map/") {
+        if (sessionStorage.getItem("settings")) {
+          var settings = JSON.parse(sessionStorage.getItem("settings"));
+          setMap(settings.activeLayer, settings);
+          if (settings.basemap) {
+            $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
+          }
+        } else {
+          setTimeout(function() {
+            app.views.main.router.back();
+          }, 300);
         }
       }
     },
@@ -303,7 +309,7 @@ function loadSavedMaps() {
     });
     for (var i = 0; i < maps.length; i++) {
       var li = `<li class="saved-map">
-        <a href="#" class="item-link item-content no-chevron" name="map" data-key="${maps[i].key}" onclick="app.router.navigate('/map/'); setMap('${maps[i].key}');">
+        <a href="/map/" class="item-link item-content no-chevron" name="map" data-key="${maps[i].key}" onclick="setMap('${maps[i].key}');">
           <div class="item-inner">
             <div class="item-title">
               ${maps[i].name}
