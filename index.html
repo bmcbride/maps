@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<!-- <html manifest="cache.appcache"> -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0084e7">
+    <meta name="description" content="A simple map viewer, built for the mobile web">
+    <meta name="author" content="Bryan McBride">
+    <title>Maps</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="stylesheet" href="assets/vendor/framework7-2.1.3/css/framework7.min.css">
+    <link rel="stylesheet" href="assets/vendor/openlayers-4.6.4/ol.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="statusbar"></div>
+      <div class="popover" id="tool-popover">
+        <div class="popover-inner">
+          <div class="block-title" style="margin: 16px;">Map Opacity</div>
+          <div class="list simple-list no-hairlines">
+            <ul>
+              <li style="line-height: 100%;">
+                <div class="item-cell width-auto flex-shrink-0">
+                  <a href="#" class="link icon-only" onclick="decreaseOpacity();">
+                    <i class="icon material-icons">remove_circle_outline</i>
+                  </a>
+                </div>
+                <div class="item-cell flex-shrink-3">
+                  <div class="range-slider" data-label="false"></div>
+                </div>
+                <div class="item-cell width-auto flex-shrink-0">
+                  <a href="#" class="link icon-only" onclick="increaseOpacity();">
+                    <i class="icon material-icons">add_circle_outline</i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="block-title" style="margin: 16px;">Online Basemap</div>
+          <div class="list no-hairlines">
+            <ul>
+              <!-- <li>
+                <label class="item-radio item-content">
+                  <input type="radio" name="basemap" value="topo"/>
+                  <i class="icon icon-radio"></i>
+                  <div class="item-inner">
+                    <div class="item-title">Topo</div>
+                  </div>
+                </label>
+              </li> -->
+              <li>
+                <label class="item-radio item-content">
+                  <input type="radio" name="basemap" value="mbStreets"/>
+                  <i class="icon icon-radio"></i>
+                  <div class="item-inner">
+                    <div class="item-title">Streets</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="item-radio item-content">
+                  <input type="radio" name="basemap" value="mbSatellite"/>
+                  <i class="icon icon-radio"></i>
+                  <div class="item-inner">
+                    <div class="item-title">Satellite</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="item-radio item-content">
+                  <input type="radio" name="basemap" value="mbOutdoors"/>
+                  <i class="icon icon-radio"></i>
+                  <div class="item-inner">
+                    <div class="item-title">Outdoors</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="item-radio item-content">
+                  <input type="radio" name="basemap" value="none" checked="checked"/>
+                  <i class="icon icon-radio"></i>
+                  <div class="item-inner">
+                    <div class="item-title">None</div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Views/Tabs container -->
+      <div class="views tabs ios-edges">
+
+        <!-- Tabbar for switching views-tabs -->
+        <div class="toolbar tabbar toolbar-bottom-md">
+          <div class="toolbar-inner">
+            <a href="#device-view" class="tab-link tab-link-active" title="Saved Maps">
+              <span class="tabbar-label">Saved Maps</span>
+            </a>
+            <a href="#list-view" class="tab-link" title="Available Maps">
+              <span class="tabbar-label">Available Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Device View -->
+        <div id="device-view" class="view view-main view-init tab tab-active">
+          <div class="page" data-name="index">
+            <div class="navbar">
+              <div class="navbar-inner sliding">
+                <div class="title sliding">Saved Maps</div>
+                <div class="right">
+                  <a href="#" class="link icon-only" onclick="app.sortable.toggle('#device-list');">
+                    <i class="icon material-icons" id="sort-icon">sort</i>
+                  </a>
+                  <a href="/info/" class="link icon-only">
+                    <i class="icon material-icons">info</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="list sortable">
+                <ul id="device-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- List View -->
+        <div id="list-view" class="view view-init tab">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-inner sliding">
+                <div class="title sliding">Available Maps</div>
+                <div class="right">
+                  <a class="link icon-only searchbar-enable" data-searchbar=".maplist-searchbar">
+                    <i class="icon material-icons">search</i>
+                  </a>
+                </div>
+                <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable maplist-searchbar searchbar-init">
+                  <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                      <input type="search" placeholder="Search"/>
+                      <i class="searchbar-icon"></i>
+                      <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button">Cancel</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="page-content ptr-content" data-ptr-distance="55" id="list-tab">
+              <div class="searchbar-backdrop"></div>
+              <div class="ptr-preloader">
+                <div class="preloader"></div>
+                <div class="ptr-arrow"></div>
+              </div>
+              <div class="list simple-list searchbar-not-found">
+                <ul>
+                  <li>Nothing found</li>
+                </ul>
+              </div>
+              <div class="list search-list searchbar-found">
+                <ul id="map-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Popup -->
+      <div class="popup popup-tablet-fullscreen" id="map-popup">
+        <div class="view">
+          <div class="page" data-name="map">
+            <div class="navbar">
+              <div class="navbar-inner sliding">
+                <div class="left">
+                  <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                  </a>
+                </div>
+                <div class="title sliding" id="map-title"></div>
+                <div class="right">
+                  <a href="#" class="link icon-only popover-open" data-popover="#tool-popover">
+                    <i class="icon material-icons">more_vert</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div id="map" class="map">
+                <div class="fab fab-right-bottom" id="rotate-btn" style="bottom: 96px; right: 10px; display: none;">
+                  <a href="#" onclick="app.map.getView().rotate(0);">
+                    <i class="icon material-icons" id="rotate-icon">navigation</i>
+                  </a>
+                </div>
+                <div class="fab fab-right-bottom" style="bottom: 30px; right: 10px;">
+                  <a href="#" id="gps-btn" onclick="app.map.getView().setCenter(app.geolocation.getPosition());">
+                    <i class="icon material-icons" id="gps-icon">gps_not_fixed</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Popup -->
+      <div class="popup popup-tablet-fullscreen" id="info-popup">
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-inner sliding">
+                <div class="left">
+                  <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                  </a>
+                </div>
+                <div class="title">App Info</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                A simple map viewer, built for the mobile web. Save your favorite georeferenced map images to your mobile device for offline viewing and navigation.
+              </div>
+              <div class="list">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media">
+                        <i class="icon material-icons">storage</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Total storage:</div>
+                        <div class="item-after" id="total-storage"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content no-chevron" onclick="deleteAllMaps();">
+                      <div class="item-media">
+                        <i class="icon material-icons color-red">delete</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Remove saved maps</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:mcbride.bryan@gmail.com?Subject=Map%20App" class="item-link external item-content">
+                      <div class="item-media">
+                        <i class="icon material-icons">email</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Developed by Bryan McBride</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/bmcbride/maps" class="item-link external item-content">
+                      <div class="item-media">
+                        <i class="icon material-icons">code</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Source code repository</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="block-title">Help Documentation</div>
+              <div class="list accordion-list">
+                <ul>
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">Available maps</div>
+                      </div></a>
+                    <div class="accordion-item-content">
+                      <div class="block">
+                        <p>You can add custom maps by editing the <i>maps.json</i> configuration file. Save a georeferenced map image as jpg or png with a world file and use <a href="http://www.gdal.org/gdalinfo.html" class="external">gdalinfo</a> to obtain the image extent (coorner coordinates) and coordinate system. Use <a href="http://epsg.io/" class="external">epsg.io</a> to get the <a href="http://proj4js.org/" class="external">Proj4js</a> projection definition.</p>
+                        <p><i>Note: map image files should be as small as possible (&lt;2MB) to improve performance since the entire image is loaded.</i></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">Saved maps</div>
+                      </div></a>
+                    <div class="accordion-item-content">
+                      <div class="block">
+                        <p>Tap on one of the available maps to save it to your device for offline use. Saved maps can be reordered by tapping the <i class="icon material-icons">sort</i> button in the navbar. Individual maps can be removed from device storage by long pressing on the list item and tapping <i>Remove map from device</i>. You can clear all maps from storage by tapping the <i>Remove saved maps</i> button above.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">Map view</div>
+                      </div></a>
+                    <div class="accordion-item-content">
+                      <div class="block">
+                        <p>Tap on a saved map to open it. You can zoom in and out and pan around using pinch and swipe gestures. If you are located within the map bounds and have allowed access to your GPS, your location will be identified as a blue dot on the map. If you have internet access, you can toggle an online basemap below your overlay map by tapping on the <i class="icon material-icons">more_vert</i> button in the navbar. The overlay map opacity can be adjusted with the slider.</p>
+                        <p>The active map and view settings are saved for the session but will be cleared out when the app or browser is closed.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="block-title">Open Source Libraries</div>
+              <div class="list links-list">
+                <ul>
+                  <li>
+                    <a href="https://framework7.io/" class="external">Framework7</a>
+                  </li>
+                  <li>
+                    <a href="http://openlayers.org/" class="external">OpenLayers</a>
+                  </li>
+                  <li>
+                    <a href="http://proj4js.org/" class="external">Proj4js</a>
+                  </li>
+                  <li>
+                    <a href="https://localforage.github.io/localForage/" class="external">localForage</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="block-title">Credits</div>
+              <div class="block">
+                Material design icons courtesy of <a href="https://material.io/icons/" class="external">Google</a>. App icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" class="external">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="external">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" class="external">CC 3.0 BY</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendor/framework7-2.1.3/js/framework7.min.js"></script>
+    <script src="assets/vendor/localForage-1.6.0/localforage.min.js"></script>
+    <script src="assets/vendor/openlayers-4.6.4/ol.js"></script>
+    <script src="assets/vendor/proj4js-2.4.3/proj4.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

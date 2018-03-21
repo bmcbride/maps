@@ -1,0 +1,57 @@
+[{
+  "name": "John Boyd Thatcher State Park - North",
+  "description": "Thacher State Park is situated along the Helderberg Escarpment, one of the richest fossil-bearing formations in the world.",
+  "attribution": "<a href=\"https://parks.ny.gov/parks/128/details.aspx\">NYS Parks</a>",
+  "url": "maps/ThacherTrailMapNorth.jpg",
+  "size": "774 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [576888.069, 4721926.832, 581079.396, 4728404.137]
+}, {
+  "name": "John Boyd Thatcher State Park - South",
+  "description": "Thacher State Park is situated along the Helderberg Escarpment, one of the richest fossil-bearing formations in the world.",
+  "attribution": "<a href=\"https://parks.ny.gov/parks/128/details.aspx\">NYS Parks</a>",
+  "url": "maps/ThacherTrailMapSouth.jpg",
+  "size": "780 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [579122.884, 4720131.897, 583034.490, 4726175.854]
+}, {
+  "name": "Lisha Kill Natural Area",
+  "description": "A visit to Lisha Kill offers a rare example of an old growth forest in a developed area. Some of the trees, namely the Eastern white pine and Eastern hemlock, are estimated to be well over 200 years old. There are flowing streams at this site, which have deep ravines through the underlying bedrock.",
+  "attribution": "<a href=\"https://www.nature.org/ourinitiatives/regions/northamerica/unitedstates/newyork/lisha-kill-map-2015.pdf\">The Nature Conservancy</a>",
+  "url": "maps/lisha_kill.jpg",
+  "size": "571 KB",
+  "projection": ["EPSG:3857","+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"],
+  "extent": [-8222528.069, 5278841.879, -8220554.311, 5281446.910]
+}, {
+  "name": "NYS GIS Orthoimagery",
+  "description": "2017 orthoimage for testing purposes.",
+  "attribution": "<a href=\"https://orthos.dhses.ny.gov/\">NYSDOP</a>",
+  "url": "maps/ortho.jpg",
+  "size": "689 KB",
+  "projection": ["EPSG:2260","+proj=tmerc +lat_0=38.83333333333334 +lon_0=-74.5 +k=0.9999 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs"],
+  "extent": [672000, 1430000, 675000, 1432000]
+}, {
+  "name": "Plotter Kill Preserve",
+  "description": "Nature preserve located out of Schenectady known for its waterfalls and overlooks.",
+  "attribution": "<a href=\"http://andyarthur.org/\">AndyArthur.org</a>",
+  "url": "maps/plotter_kill.jpg",
+  "size": "863 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [576033.602, 4740822.225, 581486.491, 4745005.710]
+}, {
+  "name": "Saratoga National Park",
+  "description": "Here, in 1777, during the American War for Independence, American troops battled and beat a British invasion force, marking the first time in world history that a British Army ever surrendered.",
+  "attribution": "<a href=\"https://www.nps.gov/hfc/cfm/carto-atoz-geopdf.cfm?letter=s\">NPS</a>",
+  "url": "maps/SARAmap1.jpg",
+  "size": "198 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [608149.764, 4758246.971, 614456.182, 4763927.807]
+}, {
+  "name": "Acadia National Park",
+  "description": "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats with high biodiversity, clean air and water, and a rich cultural heritage.",
+  "attribution": "<a href=\"https://www.nps.gov/hfc/cfm/carto-atoz-geopdf.cfm?letter=a\">NPS</a>",
+  "url": "maps/ACADmap2.jpg",
+  "size": "522 KB",
+  "projection": ["EPSG:26919","+proj=utm +zone=19 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"],
+  "extent": [541009.229, 4895918.419, 569934.104, 4922556.839]
+}]
