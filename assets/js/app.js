@@ -6,7 +6,8 @@ var app = new Framework7({
   theme: "md",
   init: false,
   touch: {
-    tapHold: true
+    tapHold: true,
+    disableContextMenu: false
   },
   view: {
     stackPages: true,
@@ -263,7 +264,7 @@ function setMap(key, settings) {
 function loadAvailableMaps() {
   $$("#map-list").empty();
   app.request({
-    url: "maps.json",
+    url: localStorage.getItem("mapConfig") ? localStorage.getItem("mapConfig") : "maps.json",
     method: "GET",
     dataType: "json",
     cache: false,
@@ -389,6 +390,43 @@ function deleteAllMaps() {
   });
 }
 
+function setMapConfig() {
+  app.dialog.create({
+    title: "Maps source",
+    content: '<div class="dialog-input-field item-input"><div class="item-input-wrap"><input id="maps-url" type="text" class="dialog-input" onClick="this.select();"></div></div>',
+    closeByBackdropClick: true,
+    buttons: [{
+        text: "Reset",
+        onClick: function(dialog, e) {
+          localStorage.setItem("mapConfig", "maps.json");
+          loadAvailableMaps();
+        }
+      }, {
+        text: "OK",
+        bold: true,
+        onClick: function(dialog, e) {
+          url = $$("#maps-url").val();
+          if (url) {
+            localStorage.setItem("mapConfig", url);
+          } else {
+            localStorage.removeItem("mapConfig");
+          }
+          loadAvailableMaps();
+        }
+      }
+    ],
+    on: {
+      opened: function() {
+        if (localStorage.getItem("mapConfig")) {
+          $$("#maps-url").val(localStorage.getItem("mapConfig"));
+        } else {
+          $$("#maps-url").val("maps.json");
+        }
+      }
+    }
+  }).open();
+}
+
 app.once("popoverOpen", function (e) {
   var range = app.range.create({
     el: ".range-slider",
@@ -417,10 +455,10 @@ app.map.on("moveend", function(evt) {
 
 app.map.getViewport().addEventListener("contextmenu", function (evt) {
   if ($$(".navbar~.page-content").css("padding-top") == "56px") {
-    app.navbar.hide(".navbar");
+    app.navbar.hide(".navbar", false);
     $$(".navbar~.page-content").css("padding-top", "0px");
   } else {
-    app.navbar.show(".navbar", true);
+    app.navbar.show(".navbar", false);
     $$(".navbar~.page-content").css("padding-top", "56px");
   }
   evt.preventDefault();
@@ -460,6 +498,10 @@ $$("input[type=radio][name=basemap]").change(function() {
     settings.basemap = null;
   }
   sessionStorage.setItem("settings", JSON.stringify(settings));
+});
+
+$$(document).on("contextmenu", "label, a", function(e){
+  e.preventDefault();
 });
 
 $$(document).on("taphold", ".saved-map", function(e) {

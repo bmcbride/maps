@@ -228,7 +228,7 @@
                     <span class="ios-only">Back</span>
                   </a>
                 </div>
-                <div class="title">App Info</div>
+                <div class="title">Settings</div>
               </div>
             </div>
             <div class="page-content">
@@ -251,10 +251,20 @@
                   <li>
                     <a href="#" class="item-link item-content no-chevron" onclick="deleteAllMaps();">
                       <div class="item-media">
-                        <i class="icon material-icons color-red">delete</i>
+                        <i class="icon material-icons">delete</i>
                       </div>
                       <div class="item-inner">
                         <div class="item-title">Remove saved maps</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content no-chevron" onclick="setMapConfig();">
+                      <div class="item-media">
+                        <i class="icon material-icons">settings</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Set maps source</div>
                       </div>
                     </a>
                   </li>
@@ -289,7 +299,7 @@
                       </div></a>
                     <div class="accordion-item-content">
                       <div class="block">
-                        <p>You can add custom maps by editing the <i>maps.json</i> configuration file. Save a georeferenced map image as jpg or png with a world file and use <a href="http://www.gdal.org/gdalinfo.html" class="external">gdalinfo</a> to obtain the image extent (coorner coordinates) and coordinate system. Use <a href="http://epsg.io/" class="external">epsg.io</a> to get the <a href="http://proj4js.org/" class="external">Proj4js</a> projection definition.</p>
+                        <p>You can add custom maps by editing the <i>maps.json</i> configuration file or tapping the <i>Set maps source</i> button and setting a custom configuration URL. Save a georeferenced map image as jpg or png with a world file and use <a href="http://www.gdal.org/gdalinfo.html" class="external">gdalinfo</a> to obtain the image extent (coorner coordinates) and coordinate system. Use <a href="http://epsg.io/" class="external">epsg.io</a> to get the <a href="http://proj4js.org/" class="external">Proj4js</a> projection definition.</p>
                         <p><i>Note: map image files should be as small as possible (&lt;2MB) to improve performance since the entire image is loaded.</i></p>
                       </div>
                     </div>
