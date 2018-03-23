@@ -262,36 +262,40 @@ function setMap(key, settings) {
 }
 
 function loadAvailableMaps() {
-  $$("#map-list").empty();
-  app.request({
-    url: localStorage.getItem("mapConfig") ? localStorage.getItem("mapConfig") : "maps.json",
-    method: "GET",
-    dataType: "json",
-    cache: false,
-    success: function (map) {
-      map.sort(function(a, b) {
-        return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;
-      });
-      for (var i = 0; i < map.length; i++) {
-        var config = JSON.stringify(map[i]);
-        var li = `<li>
-          <a href="#" class="item-link item-content no-chevron" onclick='saveMap(${config});'>
-            <div class="item-inner">
-              <div class="item-title">
-                ${map[i].name}
-                <div class="item-footer">${map[i].description}</div>
+  if (navigator.onLine) {
+    $$("#map-list").empty();
+    app.request({
+      url: localStorage.getItem("mapConfig") ? localStorage.getItem("mapConfig") : "maps.json",
+      method: "GET",
+      dataType: "json",
+      cache: false,
+      success: function (map) {
+        map.sort(function(a, b) {
+          return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;
+        });
+        for (var i = 0; i < map.length; i++) {
+          var config = JSON.stringify(map[i]);
+          var li = `<li>
+            <a href="#" class="item-link item-content no-chevron" onclick='saveMap(${config});'>
+              <div class="item-inner">
+                <div class="item-title">
+                  ${map[i].name}
+                  <div class="item-footer">${map[i].description}</div>
+                </div>
+                <div class="item-after">
+                  <span class="badge">${map[i].size}</span>
+                </div>
               </div>
-              <div class="item-after">
-                <span class="badge">${map[i].size}</span>
-              </div>
-            </div>
-          </a>
-        </li>`;
-        $$("#map-list").append(li);
+            </a>
+          </li>`;
+          $$("#map-list").append(li);
+        }
+        app.ptr.done();
       }
-      app.ptr.done();
-    }
-  });
+    });
+  } else {
+    app.ptr.done();
+  }
 }
 
 function loadSavedMaps() {
@@ -330,7 +334,13 @@ function loadSavedMaps() {
       app.tab.show("#device-view");
     } else {
       $$("#total-storage").html("0");
-      app.tab.show("#list-view");
+      $$("#device-list").append(`<li>
+        <a href="#" class="item-link item-content" onclick="app.tab.show('#list-view');">
+          <div class="item-inner">
+            <div class="item-title">Save a map to your device</div>
+          </div>
+        </a>
+      </li>`);
     }
   }).catch(function(err) {
     app.dialog.alert("Error loading saved maps!", "Load error");
@@ -368,7 +378,7 @@ function saveMap(config) {
       });
     });
   } else {
-    app.dialog.alert("Must be online to save map!", "Save error");
+    app.dialog.alert("Network connection required to save map!", "Save error");
   }
 }
 
