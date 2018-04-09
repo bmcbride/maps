@@ -35,10 +35,6 @@
   width: 100%;
 }
 
-.md .sortable-enabled .item-inner, .md .sortable-enabled .item-link .item-link.no-chevron .item-inner {
-  padding-right: 50px !important;
-}
-
 .ol-attribution {
   max-width: calc(100%);
   white-space: nowrap;
