@@ -5,7 +5,7 @@ A simple map viewer, built for the mobile web. Save your favorite georeferenced 
 https://bmcbride.github.io/maps/
 
 ## Features
-* Mobile web app with offline capabilities via Application Cache (application files) & IndexedDB (saved maps).
+* Mobile web app with offline capabilities via Service Workers (application files) & IndexedDB (saved maps).
 * Native-like material design user interface via [Framework7](https://framework7.io/) with custom list ordering, search, and pull to refresh functionality to update available maps list.
 * Cross-platform "mobile web app capable" with "add to home screen" functionality for immersive fullscreen experience.
 * Leverages [OpenLayers](http://openlayers.org/) to display a single, static image for viewing simple, small georeferenced map images (parks, hiking trails, etc.).
