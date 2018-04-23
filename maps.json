@@ -62,4 +62,12 @@
   "size": "373 KB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
   "extent": [606924.179, 4736450.650, 608182.475, 4738395.599]
+}, {
+  "name": "Bear Mountain State Park",
+  "description": "Bear Mountain State Park is situated in rugged mountains rising from the west bank of the Hudson River.",
+  "attribution": "<a href=\"https://parks.ny.gov/parks/13\">NYS Parks</a>",
+  "url": "maps/BearMountainTrailMap.jpg",
+  "size": "739 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [580975.275, 4568935.19, 587963.447, 4579735.522]
 }]
