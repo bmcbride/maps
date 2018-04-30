@@ -40,3 +40,7 @@
   white-space: nowrap;
   width: fit-content;
 }
+
+.list {
+  margin: 0px!important;
+}
