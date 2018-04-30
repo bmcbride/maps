@@ -335,7 +335,10 @@ function loadSavedMaps() {
     } else {
       $$("#total-storage").html("0");
       $$("#device-list").append(`<li>
-        <a href="#" class="item-link item-content" onclick="app.tab.show('#list-view');">
+        <a href="#" class="item-link item-content no-chevron" onclick="app.tab.show('#list-view');">
+          <div class="item-media">
+            <i class="icon material-icons">add</i>
+          </div>
           <div class="item-inner">
             <div class="item-title">Save a map to your device</div>
           </div>
