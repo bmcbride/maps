@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+build
+custom
+npm-debug.log
+.idea
+.vscode
+scripts/build-config-custom.js
+scripts/build-config-*.js
