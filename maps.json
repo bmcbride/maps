@@ -70,4 +70,12 @@
   "size": "739 KB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
   "extent": [580975.275, 4568935.19, 587963.447, 4579735.522]
+}, {
+  "name": "Fox Preserve",
+  "description": "The Fox Preserve is 70 acres of protected land in Colonie.",
+  "attribution": "<a href=\"https://mohawkhudson.org/our-preserves/fox-preserve-2/\">mohawkhudson.org</a>",
+  "url": "maps/Fox_Preserve-10-3-17.jpg",
+  "size": "436 KB",
+  "projection": ["EPSG:2260","+proj=tmerc +lat_0=38.83333333333334 +lon_0=-74.5 +k=0.9999 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs"],
+  "extent": [679476.228, 1434076.371, 683877.638, 1437476.910]
 }]
