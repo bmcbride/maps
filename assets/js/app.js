@@ -160,6 +160,18 @@ app.map = new ol.Map({
       zIndex: 15,
       source: new ol.source.Vector({
         features: [app.layers.position]
+      }),
+      style: new ol.style.Style({
+        image: new ol.style.Circle({
+          radius: 8,
+          fill: new ol.style.Fill({
+            color: "#3a84df"
+          }),
+          stroke: new ol.style.Stroke({
+            color: "#fff",
+            width: 1.5
+          })
+        })
       })
     })
   ]
@@ -486,13 +498,6 @@ app.geolocation.on("change:position", function() {
   var heading = app.geolocation.getHeading() || 0;
   var speed = app.geolocation.getSpeed() || 0;
   app.layers.position.setGeometry(coordinates ? new ol.geom.Point(coordinates) : null);
-  if (speed && heading) {
-    var img = app.styles.moving.getImage();
-    img.setRotation(heading);
-    app.layers.position.setStyle(app.styles.moving);
-  } else {
-    app.layers.position.setStyle(app.styles.stationary);
-  }
 });
 
 $$("input[type=radio][name=basemap]").change(function() {
