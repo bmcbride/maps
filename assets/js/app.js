@@ -80,7 +80,9 @@ app.mapStore = localforage.createInstance({
 
 app.layers = {
   position: new ol.Feature(),
-  image: new ol.layer.Image(),
+  image: new ol.layer.Image({
+    zIndex: 10
+  }),
   basemaps: {
     osm: new ol.layer.Tile({
       source: new ol.source.XYZ({
@@ -154,11 +156,15 @@ app.map = new ol.Map({
       collapsed: false
     }
   }),
-  overlays: [app.layers.image, new ol.layer.Vector({
-    source: new ol.source.Vector({
-      features: [app.layers.position]
+  layers: [
+    app.layers.image,
+    new ol.layer.Vector({
+      zIndex: 15,
+      source: new ol.source.Vector({
+        features: [app.layers.position]
+      })
     })
-  })]
+  ]
 });
 
 function calculateStorage(bytes) {
@@ -199,10 +205,13 @@ function setMap(key, settings) {
     $$("#map-title").html(value.name);
     var blob = new Blob([value.image]);
 
+    var projection = proj4.defs(value.projection[0],value.projection[1]);
+    ol.proj.proj4.register(proj4);
+
     app.layers.image.setSource(
       new ol.source.ImageStatic({
         url: window.URL.createObjectURL(blob),
-        projection: proj4.defs(value.projection[0],value.projection[1]),
+        projection: projection,
         imageExtent: value.extent,
         attributions: value.attribution.replace("<a", "<a class='external'")
       })
