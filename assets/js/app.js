@@ -36,8 +36,6 @@ var app = new Framework7({
           app.geolocation.setTracking(false);
           app.layers.image.setVisible(false);
           app.map.render();
-          app.navbar.show(".navbar", false);
-          $$(".navbar~.page-content").css("padding-top", "56px");
         },
         opened: function() {
           app.geolocation.setTracking(true);
@@ -473,17 +471,6 @@ app.map.on("moveend", function(evt) {
   var settings = JSON.parse(sessionStorage.getItem("settings"));
   settings.state = app.map.getView().getState();
   sessionStorage.setItem("settings", JSON.stringify(settings));
-});
-
-app.map.getViewport().addEventListener("contextmenu", function (evt) {
-  if ($$(".navbar~.page-content").css("padding-top") == "56px") {
-    app.navbar.hide(".navbar", false);
-    $$(".navbar~.page-content").css("padding-top", "0px");
-  } else {
-    app.navbar.show(".navbar", false);
-    $$(".navbar~.page-content").css("padding-top", "56px");
-  }
-  evt.preventDefault();
 });
 
 app.geolocation.on("error", function(error) {
