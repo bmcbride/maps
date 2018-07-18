@@ -199,6 +199,9 @@
                 </div>
                 <div class="title sliding" id="map-title"></div>
                 <div class="right">
+                  <a href="#" class="link icon-only" onclick="app.map.getView().setRotation(0); app.map.getView().fit(app.layers.image.getExtent(), {constrainResolution: false});">
+                    <i class="icon material-icons">zoom_out_map</i>
+                  </a>
                   <a href="#" class="link icon-only popover-open" data-popover="#tool-popover">
                     <i class="icon material-icons">more_vert</i>
                   </a>

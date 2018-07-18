@@ -215,6 +215,8 @@ function setMap(key, settings) {
       })
     );
 
+    app.layers.image.setExtent(value.extent);
+
     app.map.setView(
       new ol.View({
         projection: value.projection[0]/*,
