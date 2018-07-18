@@ -122,19 +122,6 @@ app.layers = {
   }
 };
 
-app.styles = {
-  stationary: new ol.style.Style({
-    image: new ol.style.Icon({
-      src: "assets/img/geolocation_marker.png"
-    })
-  }),
-  moving: new ol.style.Style({
-    image: new ol.style.Icon({
-      src: "assets/img/geolocation_marker_heading.png"
-    })
-  })
-};
-
 app.geolocation = new ol.Geolocation({
   trackingOptions: {
     maximumAge: 10000,
