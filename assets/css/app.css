@@ -33,6 +33,21 @@
 .map {
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.crosshair {
+  visibility: hidden;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background: transparent url(../img/crosshair.svg) 0 0 no-repeat scroll;
+  top: 50%;
+  left: 50%;
+  margin: -27px 0 0 -27px;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 1;
 }
 
 .ol-attribution {

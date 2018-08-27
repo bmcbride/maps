@@ -29,13 +29,16 @@ var app = new Framework7({
     path: "/map/",
     popup: {
       el: "#map-popup",
-      animate: false,
       on: {
+        close: function() {
+          app.popover.close();
+          app.toast.close();
+          app.measure.clearMeasure();
+        },
         closed: function() {
           $$("#map-title").html("");
           app.geolocation.setTracking(false);
           app.layers.image.setVisible(false);
-          app.map.render();
         },
         opened: function() {
           app.geolocation.setTracking(true);
@@ -80,6 +83,48 @@ app.layers = {
   position: new ol.Feature(),
   image: new ol.layer.Image({
     zIndex: 10
+  }),
+  measure: new ol.layer.Vector({
+    updateWhileInteracting: true,
+    zIndex: 12,
+    source: new ol.source.Vector({}),
+    style: function (feature, resolution) {
+      if (feature.getGeometry().getType() == "LineString") {
+        return new ol.style.Style({
+          text: new ol.style.Text({
+            text: feature.getGeometry().getLength() ? app.measure.formatLength(feature.getGeometry().getLength()) : "",
+            font: "bold 14px 'Open Sans', 'Arial Unicode MS', 'sans-serif'",
+            placement: "line",
+            offsetY: -10,
+            fill: new ol.style.Fill({
+              color: "black"
+            }),
+            stroke: new ol.style.Stroke({
+              color: "white",
+              width: 3
+            })
+          }),
+          stroke: new ol.style.Stroke({
+            color: "#3a84df",
+            lineDash: [0, 10, 0, 10],
+            width: 6
+          })
+        });
+      } else if (feature.getGeometry().getType() == "Point") {
+        return new ol.style.Style({
+          image: new ol.style.Circle({
+            radius: 6,
+            fill: new ol.style.Fill({
+              color: "#fff"
+            }),
+            stroke: new ol.style.Stroke({
+              color: "#3a84df",
+              width: 1.5
+            })
+          })
+        });
+      }
+    }
   }),
   basemaps: {
     osm: new ol.layer.Tile({
@@ -130,6 +175,64 @@ app.geolocation = new ol.Geolocation({
   }
 });
 
+app.measure = {
+  measuring: false,
+  measurement: 0,
+  formatLength: function(length) {
+    var meters = length * app.map.getView().getProjection().getMetersPerUnit();
+    var feet = meters * 3.2808;
+    var output;
+    if (feet > 1320) {
+      output = (feet * 0.00018939).toFixed(2) + " " + "mi";
+    } else {
+      output = feet.toFixed(0) + " " + "ft";
+    }
+    return output;
+  },
+  measureClickListener: function() {
+    if (app.measure.measuring) {
+      app.measure.addSegment();
+    } else {
+      app.measure.startMeasure();
+    }
+  },
+  startMeasure: function() {
+    app.measure.measuring = true;
+    var center = app.map.getView().getCenter();
+    var point = new ol.Feature(new ol.geom.Point(center));
+    app.layers.measure.getSource().addFeature(point);
+
+    var origin = center;
+    var target = center;
+    var coord = [origin, target];
+    app.measure.line = new ol.geom.LineString(coord);
+    var feature = new ol.Feature(app.measure.line);
+    app.layers.measure.getSource().addFeature(feature);
+
+    app.measure.drawLine = function() {
+      target = app.map.getView().getCenter();
+      coord = [origin, target];
+      app.measure.line.setCoordinates(coord);
+    };
+
+    app.map.on("postrender", app.measure.drawLine);
+  },
+  addSegment: function() {
+    app.measure.measurement += app.measure.line.getLength();
+    app.map.un("postrender", app.measure.drawLine);
+    app.measure.startMeasure();
+    $$(".toast-text").html("Total length: " + app.measure.formatLength(app.measure.measurement));
+  },
+  clearMeasure: function() {
+    app.measure.measurement = 0;
+    app.layers.measure.getSource().clear();
+    app.map.un("postrender", app.measure.drawLine);
+    app.map.un("click", app.measure.measureClickListener);
+    $$(".crosshair").css("visibility", "hidden");
+    $$(".toast-text").html("Tap to add measurement segments.");
+  }
+};
+
 app.map = new ol.Map({
   target: "map",
   logo: null,
@@ -143,6 +246,7 @@ app.map = new ol.Map({
   }),
   layers: [
     app.layers.image,
+    app.layers.measure,
     new ol.layer.Vector({
       zIndex: 15,
       source: new ol.source.Vector({
@@ -163,6 +267,29 @@ app.map = new ol.Map({
     })
   ]
 });
+
+function launchGmaps() {
+  var coords = ol.proj.transform(app.map.getView().getCenter(), app.map.getView().getProjection().getCode(), "EPSG:4326");
+  var zoom = app.map.getView().getZoom();
+  var url = "https://www.google.com/maps/@?api=1&map_action=map&center="+coords[1]+","+coords[0]+"&zoom="+Math.round(zoom);
+  window.open(url);
+}
+
+function startMeasurement() {
+  app.toast.create({
+    text: "Tap to add measurement segments.",
+    closeButton: true,
+    on: {
+      close: function () {
+        app.measure.clearMeasure();
+      },
+      open: function() {
+        $$(".crosshair").css("visibility", "visible");
+        app.map.on("click", app.measure.measureClickListener);
+      }
+    }
+  }).open();
+}
 
 function calculateStorage(bytes) {
   var kb = bytes / 1000;
@@ -362,30 +489,36 @@ function saveMap(config) {
   if (navigator.onLine) {
     app.dialog.confirm("Save <b>" + config.name + "</b> to your device?", "Confirm", function() {
       app.dialog.progress("Downloading map...");
-      fetch(config.url).then(function(response) {
-        return response.arrayBuffer();
-      }).then(function(image) {
-        var key = new Date().getTime().toString();
-        var value = {
-          "order": $$("#device-list li").length,
-          "name": config.name,
-          "description": config.description,
-          "attribution": config.attribution,
-          "projection": config.projection,
-          "extent": config.extent,
-          "image": image
-        };
-        app.mapStore.setItem(key, value).then(function (value) {
-          app.dialog.close();
-          app.toast.create({
-            text: "Map saved!",
-            closeTimeout: 2000,
-            closeButton: true
-          }).open();
-          loadSavedMaps();
-        }).catch(function(err) {
-          app.dialog.alert("Error saving map!", "Save error");
-        });
+
+      app.request({
+        url: config.url,
+        method: "GET",
+        xhrFields: {
+          responseType: "arraybuffer"
+        },
+        success: function (image) {
+          var key = new Date().getTime().toString();
+          var value = {
+            "order": $$("#device-list li").length,
+            "name": config.name,
+            "description": config.description,
+            "attribution": config.attribution,
+            "projection": config.projection,
+            "extent": config.extent,
+            "image": image
+          };
+          app.mapStore.setItem(key, value).then(function (value) {
+            app.dialog.close();
+            app.toast.create({
+              text: "Map saved!",
+              closeTimeout: 2000,
+              closeButton: true
+            }).open();
+            loadSavedMaps();
+          }).catch(function(err) {
+            app.dialog.alert("Error saving map!", "Save error");
+          });
+        }
       });
     });
   } else {
