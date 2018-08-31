@@ -1,5 +1,5 @@
 /**
- * Framework7 3.1.1
+ * Framework7 3.2.1
  * Full featured mobile HTML framework for building iOS & Android apps
  * http://framework7.io/
  *
@@ -7,8 +7,11 @@
  *
  * Released under the MIT License
  *
- * Released on: August 3, 2018
+ * Released on: August 31, 2018
  */
+html {
+  direction: rtl;
+}
 html,
 body,
 .framework7-root {
@@ -267,10 +270,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   z-index: -1;
   content: '';
   opacity: 0;
-  right: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  left: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
 .md .page-opacity-effect {
   position: absolute;
@@ -293,8 +296,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
   pointer-events: none;
 }
 .md .page-next.page-next-on-right {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 .md .page-transitioning,
 .md .page-transitioning .page-shadow-effect,
@@ -409,7 +412,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .link i + i,
 .md .link span + i,
 .md .link span + span {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 /* === Navbar === */
 .navbar {
@@ -580,10 +583,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   color: rgba(255, 255, 255, 0.85);
 }
 .md .navbar .right {
-  margin-left: auto;
+  margin-right: auto;
 }
 .md .navbar .right:first-child {
-  right: 16px;
+  left: 16px;
 }
 .md .navbar-inner {
   -webkit-box-pack: start;
@@ -904,7 +907,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .toolbar a.link i + i,
 .md .toolbar a.link span + i,
 .md .toolbar a.link span + span {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .toolbar a.icon-only {
   min-width: 0;
@@ -947,12 +950,13 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .tabbar .tab-link-highlight,
 .md .tabbar-labels .tab-link-highlight {
   position: absolute;
+  left: 0;
   bottom: 0;
   height: 2px;
   background: #fff;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  left: 0;
+  right: 0;
 }
 .md .toolbar-bottom-md,
 .md .messagebar {
@@ -1367,13 +1371,13 @@ html.with-statusbar.device-iphone-x .framework7-root {
   font-weight: 500;
 }
 .md .subnavbar .title:first-child {
-  margin-left: 56px;
+  margin-right: 56px;
 }
 .md .subnavbar .right {
-  margin-left: auto;
+  margin-right: auto;
 }
 .md .subnavbar .right:first-child {
-  right: 16px;
+  left: 16px;
 }
 .md .subnavbar a {
   color: inherit;
@@ -1420,10 +1424,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   padding: 0 16px;
 }
 .md .subnavbar-inner > a.link:first-child {
-  margin-left: -16px;
+  margin-right: -16px;
 }
 .md .subnavbar-inner > a.link:last-child {
-  margin-right: -16px;
+  margin-left: -16px;
 }
 .md .subnavbar ~ * .page-content,
 .md .subnavbar ~ .page-content,
@@ -1997,7 +2001,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
+  margin-right: auto;
 }
 .list .item-link,
 .list .list-button {
@@ -2242,8 +2246,8 @@ li.media-item .chevron-center .item-link .item-inner,
 li.media-item .item-link.chevron-center .item-inner {
   background-size: 8px 13px;
   background-repeat: no-repeat;
-  background-position: 95% center;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23c7c7cc'%20transform%3D'translate(1.500000%2C%206.500000)%20rotate(-45.000000)%20translate(-1.500000%2C%20-6.500000)%20'%20points%3D'6%2011%206%202%204%202%204%209%20-3%209%20-3%2011%205%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-position: 15px center;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23c7c7cc'%20transform%3D'translate(6.500000%2C%206.500000)%20rotate(-225.000000)%20translate(-6.500000%2C%20-6.500000)%20'%20points%3D'11%2011%2011%202%209%202%209%209%202%209%202%2011%2010%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 .links-list.no-chevron a,
 .no-chevron .links-list a,
@@ -2266,7 +2270,7 @@ li.media-item .item-link .item-inner {
 }
 .media-list .item-link .item-title-row,
 li.media-item .item-link .item-title-row {
-  background-position: right center !important;
+  background-position: left center !important;
 }
 .list-group ul:after,
 .list-group ul:before {
@@ -2325,7 +2329,7 @@ li.list-group-title:before {
 .theme-dark .media-list .item-link .item-title-row,
 .media-list.theme-dark .item-link .item-title-row,
 .theme-dark li.media-item .item-link .item-title-row {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23434345'%20transform%3D'translate(1.500000%2C%206.500000)%20rotate(-45.000000)%20translate(-1.500000%2C%20-6.500000)%20'%20points%3D'6%2011%206%202%204%202%204%209%20-3%209%20-3%2011%205%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23434345'%20transform%3D'translate(6.500000%2C%206.500000)%20rotate(-225.000000)%20translate(-6.500000%2C%20-6.500000)%20'%20points%3D'11%2011%2011%202%209%202%209%209%202%209%202%2011%2010%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 .theme-dark .media-list .item-link .item-inner,
 .media-list.theme-dark .item-link .item-inner,
@@ -2339,16 +2343,13 @@ li.list-group-title:before {
 .md .list .item-cell {
   width: 100%;
   min-width: 0;
-  margin-left: 16px;
+  margin-right: 16px;
 }
 .md .list .item-cell:first-child {
-  margin-left: 0;
-}
-.md .list .ripple-wave + .item-cell {
-  margin-left: 0;
+  margin-right: 0;
 }
 .md .list ul ul {
-  padding-left: 56px;
+  padding-right: 56px;
 }
 .md .list .item-media {
   padding-top: 8px;
@@ -2356,19 +2357,19 @@ li.list-group-title:before {
 }
 .md .list .item-media i + i,
 .md .list .item-media i + img {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .list .item-media + .item-inner {
-  margin-left: 16px;
+  margin-right: 16px;
 }
 .md .list .item-inner {
   min-height: 48px;
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .list .item-after {
   color: #757575;
   font-size: 14px;
-  padding-left: 8px;
+  padding-right: 8px;
 }
 .md .list .item-link,
 .md .list .list-button {
@@ -2376,7 +2377,7 @@ li.list-group-title:before {
 }
 .md .list .item-link .item-inner,
 .md .list .list-button .item-inner {
-  padding-right: 42px;
+  padding-left: 42px;
 }
 .md .list .item-link.active-state,
 .md .list .list-button.active-state {
@@ -2389,7 +2390,7 @@ li.list-group-title:before {
 }
 .md .list .item-content {
   min-height: 48px;
-  padding-left: 16px;
+  padding-right: 16px;
 }
 .md .list .item-subtitle {
   font-size: 14px;
@@ -2414,7 +2415,7 @@ li.list-group-title:before {
 .md .list.no-chevron .item-link .item-inner,
 .md .list .no-chevron .item-link .item-inner,
 .md .no-chevron .list .item-link .item-inner {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .simple-list li:after {
   content: '';
@@ -2447,8 +2448,8 @@ li.list-group-title:before {
 }
 .md .simple-list li:after {
   width: auto;
-  left: 16px;
-  right: 0;
+  left: 0;
+  right: 16px;
 }
 .md .links-list a:after {
   content: '';
@@ -2484,18 +2485,18 @@ li.list-group-title:before {
   width: auto;
 }
 .md .links-list a {
-  padding-left: 16px;
-  padding-right: 42px;
+  padding-right: 16px;
+  padding-left: 42px;
 }
 .md .links-list a:after {
-  left: 16px;
-  right: 0;
+  right: 16px;
+  left: 0;
 }
 .md .links-list.no-chevron a,
 .md .no-chevron .links-list a,
 .md .links-list a.no-chevron,
 .md .links-list .no-chevron a {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .media-list .item-inner,
 .md li.media-item .item-inner {
@@ -2504,11 +2505,11 @@ li.list-group-title:before {
 }
 .md .media-list .item-link .item-inner,
 .md li.media-item .item-link .item-inner {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .media-list .item-link .item-title-row,
 .md li.media-item .item-link .item-title-row {
-  padding-right: 26px;
+  padding-left: 26px;
 }
 .md .media-list .item-media,
 .md li.media-item .item-media {
@@ -2521,7 +2522,7 @@ li.list-group-title:before {
 .md li.media-item.chevron-center .item-link .item-inner,
 .md li.media-item .item-link.chevron-center .item-inner,
 .md li.media-item .chevron-center .item-link .item-inner {
-  padding-right: 42px;
+  padding-left: 42px;
 }
 .md .media-list.no-chevron .item-link .item-title-row,
 .md .no-chevron .media-list .item-link .item-title-row,
@@ -2532,11 +2533,11 @@ li.list-group-title:before {
 .md .media-list .chevron-center .item-title-row,
 .md li.media-item.chevron-center .item-title-row,
 .md li.media-item .chevron-center .item-title-row {
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .md .list .item-link .item-inner,
 .md .links-list a {
-  background-position: calc(100% - 16px) center;
+  background-position: 16px center;
 }
 .md .item-divider,
 .md .list-group-title {
@@ -2730,37 +2731,143 @@ html.device-pixel-ratio-3 .md li:last-child li .item-inner:after {
   .md.device-iphone-x .panel-left .list.inset:not(.no-ios-edges):not(.no-ios-left-edge) .block-footer {
     padding-left: 15px;
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content {
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    background-position: calc(16px + constant(safe-area-inset-left)) center;
+    background-position: calc(16px + env(safe-area-inset-left)) center;
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner {
     padding-left: calc(16px + constant(safe-area-inset-left));
     padding-left: calc(16px + env(safe-area-inset-left));
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after {
-    left: calc(16px + constant(safe-area-inset-left));
-    left: calc(16px + env(safe-area-inset-left));
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner {
+    padding-left: calc(16px + constant(safe-area-inset-left));
+    padding-left: calc(16px + env(safe-area-inset-left));
   }
   .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a {
     padding-left: calc(16px + constant(safe-area-inset-left));
     padding-left: calc(16px + env(safe-area-inset-left));
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after {
-    left: calc(16px + constant(safe-area-inset-left));
-    left: calc(16px + env(safe-area-inset-left));
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row {
+    padding-left: 0;
   }
   .md.device-iphone-x .ios-right-edge .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
   .md.device-iphone-x .ios-edges .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
@@ -2815,143 +2922,37 @@ html.device-pixel-ratio-3 .md li:last-child li .item-inner:after {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    background-position: calc(100% - 16px - constant(safe-area-inset-right)) center;
-    background-position: calc(100% - 16px - env(safe-area-inset-right)) center;
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner {
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner {
-    padding-right: calc(16px + constant(safe-area-inset-right));
-    padding-right: calc(16px + env(safe-area-inset-right));
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after {
+    right: calc(16px + constant(safe-area-inset-right));
+    right: calc(16px + env(safe-area-inset-right));
   }
   .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row {
-    padding-right: 0;
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after {
+    right: calc(16px + const(safe-area-inset-right));
+    right: calc(16px + env(safe-area-inset-right));
   }
 }
 @media (orientation: landscape) and (min-width: 768px) {
@@ -3329,7 +3330,7 @@ button {
 .md .button > span:not(.ripple-wave) + span,
 .md .button > span:not(.ripple-wave) + i.icon,
 .md .button > i.icon + i.icon {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .button.button-raised {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -3365,29 +3366,29 @@ button {
 .md .segmented .button {
   border-radius: 0;
   min-width: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .md .segmented .button:first-child {
-  border-radius: 4px 0 0 4px;
-  border-left: none;
+  border-radius: 0 4px 4px 0;
+  border-right: none;
 }
 .md .segmented .button.button-outline {
   border: 2px solid #2196f3;
 }
 .md .segmented .button.button-outline:nth-child(n + 2) {
-  border-left: none;
+  border-right: none;
 }
 .md .segmented .button:last-child {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px 0 0 4px;
 }
 .md .segmented .button:first-child:last-child {
   border-radius: 4px;
 }
 .md .segmented .button.button-round:first-child {
-  border-radius: 36px 0 0 36px;
+  border-radius: 0 36px 36px 0;
 }
 .md .segmented .button.button-round:last-child {
-  border-radius: 0 36px 36px 0;
+  border-radius: 36px 0 0 36px;
 }
 .md .theme-dark .button:not(.button-fill):not(.button-fill-md):not(.button-active):not(.tab-link-active).active-state {
   background-color: rgba(255, 255, 255, 0.1);
@@ -3967,160 +3968,160 @@ i.icon {
   width: 24px;
   height: 24px;
 }
-.md .icon-back {
+.md .icon-forward {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-forward {
+.md .icon-back {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next {
+.md .icon-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-prev {
+.md .icon-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
-}
-.md .icon-back.color-red,
-.md a.link .color-red .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-red,
 .md a.link .color-red .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-red,
-.md a.link .color-red .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-red,
+.md a.link .color-red .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-red,
 .md a.link .color-red .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-green,
-.md a.link .color-green .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-red,
+.md a.link .color-red .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-green,
 .md a.link .color-green .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-green,
-.md a.link .color-green .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-green,
+.md a.link .color-green .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-green,
 .md a.link .color-green .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-blue,
-.md a.link .color-blue .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-green,
+.md a.link .color-green .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-blue,
 .md a.link .color-blue .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-blue,
-.md a.link .color-blue .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-blue,
+.md a.link .color-blue .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-blue,
 .md a.link .color-blue .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-pink,
-.md a.link .color-pink .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-blue,
+.md a.link .color-blue .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-pink,
 .md a.link .color-pink .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-pink,
-.md a.link .color-pink .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-pink,
+.md a.link .color-pink .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-pink,
 .md a.link .color-pink .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-yellow,
-.md a.link .color-yellow .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-pink,
+.md a.link .color-pink .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-yellow,
 .md a.link .color-yellow .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-yellow,
-.md a.link .color-yellow .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-yellow,
+.md a.link .color-yellow .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-yellow,
 .md a.link .color-yellow .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-orange,
-.md a.link .color-orange .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-yellow,
+.md a.link .color-yellow .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-orange,
 .md a.link .color-orange .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-orange,
-.md a.link .color-orange .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-orange,
+.md a.link .color-orange .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-orange,
 .md a.link .color-orange .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-gray,
-.md a.link .color-gray .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-orange,
+.md a.link .color-orange .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-gray,
 .md a.link .color-gray .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-gray,
-.md a.link .color-gray .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-gray,
+.md a.link .color-gray .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-gray,
 .md a.link .color-gray .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-white,
-.md a.link .color-white .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-gray,
+.md a.link .color-gray .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-white,
 .md a.link .color-white .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-white,
-.md a.link .color-white .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-white,
+.md a.link .color-white .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-white,
 .md a.link .color-white .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-black,
-.md a.link .color-black .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-white,
+.md a.link .color-white .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-black,
 .md a.link .color-black .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-black,
-.md a.link .color-black .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-black,
+.md a.link .color-black .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-black,
 .md a.link .color-black .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+}
+.md .icon-next.color-black,
+.md a.link .color-black .icon-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon.color-red {
@@ -4237,6 +4238,11 @@ i.icon {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .dialog-buttons-vertical .dialog-buttons {
   display: block;
@@ -5445,8 +5451,8 @@ html.with-statusbar.md:not(.device-ios):not(.device-android) .toast-top {
 .md .toast-button {
   margin-top: -8px;
   margin-bottom: -8px;
-  margin-left: 16px;
-  margin-right: -8px;
+  margin-right: 16px;
+  margin-left: -8px;
 }
 @media (max-width: 568px) {
   .md.device-iphone-x .toast-bottom .toast-content {
@@ -6447,8 +6453,8 @@ body > .progressbar-infinite,
   cursor: move;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  right: 0;
-  background-position: 100% 50%;
+  left: 0;
+  background-position: 0% 50%;
 }
 .sortable .item-inner {
   -webkit-transition-duration: 300ms;
@@ -6490,35 +6496,35 @@ body > .progressbar-infinite,
 }
 .md .sortable-enabled .item-inner,
 .md .sortable-enabled .item-link .item-inner {
-  padding-right: 50px;
+  padding-left: 50px;
 }
 .md .list.sortable-enabled .item-link.no-chevron .item-inner,
 .md .list.sortable-enabled.no-chevron .item-link .item-inner,
 .md .list.sortable-enabled .no-chevron .item-link .item-inner,
 .md .no-chevron .list.sortable-enabled .item-link .item-inner {
-  padding-right: 50px;
+  padding-left: 50px;
 }
 @media (orientation: landscape) {
-  .md.device-iphone-x .ios-right-edge .sortable-handler,
+  .md.device-iphone-x .ios-left-edge .sortable-handler,
   .md.device-iphone-x .ios-edges .sortable-handler,
   .md.device-iphone-x .popup .sortable-handler,
   .md.device-iphone-x .sheet-modal .sortable-handler,
-  .md.device-iphone-x .panel-right .sortable-handler {
-    right: constant(safe-area-inset-right);
-    right: env(safe-area-inset-right);
+  .md.device-iphone-x .panel-left .sortable-handler {
+    left: constant(safe-area-inset-left);
+    left: env(safe-area-inset-left);
   }
-  .md.device-iphone-x .ios-right-edge .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
+  .md.device-iphone-x .ios-left-edge .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
   .md.device-iphone-x .ios-edges .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
   .md.device-iphone-x .popup .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
   .md.device-iphone-x .sheet-modal .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .panel-right .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .ios-right-edge .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
+  .md.device-iphone-x .panel-left .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
+  .md.device-iphone-x .ios-left-edge .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
   .md.device-iphone-x .ios-edges .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
   .md.device-iphone-x .popup .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
   .md.device-iphone-x .sheet-modal .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .panel-right .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
+  .md.device-iphone-x .panel-left .sortable-enabled:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner {
+    padding-left: calc(42px + constant(safe-area-inset-right));
+    padding-left: calc(42px + env(safe-area-inset-right));
   }
 }
 /* === Swipeout === */
@@ -6605,6 +6611,7 @@ body > .progressbar-infinite,
   z-index: -1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  pointer-events: none;
 }
 .swipeout-actions-right {
   right: 0%;
@@ -6786,7 +6793,7 @@ body > .progressbar-infinite,
   background-color: transparent;
 }
 .list li.accordion-item ul {
-  padding-left: 0;
+  padding-right: 0;
 }
 .accordion-item-content {
   position: relative;
@@ -6804,8 +6811,9 @@ html.device-android-4 .accordion-item-content {
   transform: none;
 }
 .md .list .accordion-item-toggle .item-inner {
-  padding-right: 42px;
-  background: no-repeat calc(100% - 16px) center;
+  padding-left: 42px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
 }
 .md .list .accordion-item-toggle.active-state {
   background-color: rgba(0, 0, 0, 0.1);
@@ -6877,7 +6885,7 @@ html.device-android-4 .accordion-item-content {
   margin-top: -48px;
 }
 .md .contacts-list li:not(.list-group-title) {
-  padding-left: 56px;
+  padding-right: 56px;
 }
 .md .theme-dark .contacts-list .list-group-title {
   color: #fff;
@@ -7327,13 +7335,14 @@ html.device-android-4 .accordion-item-content {
 }
 .timeline-horizontal .timeline-item-date {
   width: auto;
+  text-align: left;
   line-height: 34px;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 34px;
-  text-align: left;
+  text-align: right;
 }
 .timeline-horizontal .timeline-item-content {
   overflow: auto;
@@ -7574,11 +7583,11 @@ html.device-android-4 .accordion-item-content {
   font-size: 16px;
 }
 .md .timeline-sides .timeline-item {
-  margin-left: calc(50% - (32px + 10px) / 2 - 50px);
-  margin-right: 0;
+  margin-right: calc(50% - (32px + 10px) / 2 - 50px);
+  margin-left: 0;
 }
 .md .timeline-sides .timeline-item .timeline-item-date {
-  text-align: right;
+  text-align: left;
 }
 .md .timeline-sides .timeline-item:not(.timeline-item-right):nth-child(2n) {
   -webkit-box-orient: horizontal;
@@ -7586,11 +7595,11 @@ html.device-android-4 .accordion-item-content {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  margin-right: calc(50% - (32px + 10px) / 2 - 50px);
-  margin-left: 0;
+  margin-left: calc(50% - (32px + 10px) / 2 - 50px);
+  margin-right: 0;
 }
 .md .timeline-sides .timeline-item:not(.timeline-item-right):nth-child(2n) .timeline-item-date {
-  text-align: left;
+  text-align: right;
 }
 .md .timeline-sides .timeline-item-left {
   -webkit-box-orient: horizontal;
@@ -7598,26 +7607,26 @@ html.device-android-4 .accordion-item-content {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  margin-right: calc(50% - (32px + 10px) / 2 - 50px);
-  margin-left: 0;
-}
-.md .timeline-sides .timeline-item-left .timeline-item-date {
-  text-align: left;
-}
-.md .timeline-sides .timeline-item-right {
   margin-left: calc(50% - (32px + 10px) / 2 - 50px);
   margin-right: 0;
 }
-.md .timeline-sides .timeline-item-right .timeline-item-date {
+.md .timeline-sides .timeline-item-left .timeline-item-date {
   text-align: right;
+}
+.md .timeline-sides .timeline-item-right {
+  margin-right: calc(50% - (32px + 10px) / 2 - 50px);
+  margin-left: 0;
+}
+.md .timeline-sides .timeline-item-right .timeline-item-date {
+  text-align: left;
 }
 @media (min-width: 768px) {
   .md .tablet-sides .timeline-item {
-    margin-left: calc(50% - (32px + 10px) / 2 - 50px);
-    margin-right: 0;
+    margin-right: calc(50% - (32px + 10px) / 2 - 50px);
+    margin-left: 0;
   }
   .md .tablet-sides .timeline-item .timeline-item-date {
-    text-align: right;
+    text-align: left;
   }
   .md .tablet-sides .timeline-item:not(.timeline-item-right):nth-child(2n) {
     -webkit-box-orient: horizontal;
@@ -7625,11 +7634,11 @@ html.device-android-4 .accordion-item-content {
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    margin-right: calc(50% - (32px + 10px) / 2 - 50px);
-    margin-left: 0;
+    margin-left: calc(50% - (32px + 10px) / 2 - 50px);
+    margin-right: 0;
   }
   .md .tablet-sides .timeline-item:not(.timeline-item-right):nth-child(2n) .timeline-item-date {
-    text-align: left;
+    text-align: right;
   }
   .md .tablet-sides .timeline-item-left {
     -webkit-box-orient: horizontal;
@@ -7637,18 +7646,18 @@ html.device-android-4 .accordion-item-content {
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    margin-right: calc(50% - (32px + 10px) / 2 - 50px);
-    margin-left: 0;
-  }
-  .md .tablet-sides .timeline-item-left .timeline-item-date {
-    text-align: left;
-  }
-  .md .tablet-sides .timeline-item-right {
     margin-left: calc(50% - (32px + 10px) / 2 - 50px);
     margin-right: 0;
   }
-  .md .tablet-sides .timeline-item-right .timeline-item-date {
+  .md .tablet-sides .timeline-item-left .timeline-item-date {
     text-align: right;
+  }
+  .md .tablet-sides .timeline-item-right {
+    margin-right: calc(50% - (32px + 10px) / 2 - 50px);
+    margin-left: 0;
+  }
+  .md .tablet-sides .timeline-item-right .timeline-item-date {
+    text-align: left;
   }
 }
 .md .timeline-horizontal {
@@ -7739,7 +7748,7 @@ html.device-android-4 .accordion-item-content {
 }
 .md .timeline-year-title span,
 .md .timeline-month-title span {
-  left: 12px;
+  right: 12px;
 }
 .md .timeline-year-title span {
   margin-top: 2px;
@@ -8639,15 +8648,16 @@ input[type="button"].md .card-footer a.link {
   line-height: 32px;
   color: #fff;
   font-size: 16px;
-  margin-left: -12px;
+  margin-right: -12px;
 }
 .md .chip-media + .chip-label {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .chip-label + .chip-delete {
-  margin-left: 4px;
+  margin-right: 4px;
 }
 .md .chip-delete {
+  margin-right: -8px;
   width: 24px;
   height: 24px;
   line-height: 24px;
@@ -8655,7 +8665,7 @@ input[type="button"].md .card-footer a.link {
   background-position: center;
   background-size: 20px 20px;
   opacity: 0.54;
-  margin-right: -8px;
+  margin-left: -8px;
 }
 .md .theme-dark .chip {
   background: #333;
@@ -8811,6 +8821,16 @@ textarea {
 .list input[type="datetime-local"] {
   line-height: 44px;
 }
+.list input[type="date"],
+.list input[type="datetime-local"] {
+  text-align: right;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  width: auto;
+}
 .list textarea {
   resize: none;
   line-height: 1.4;
@@ -8854,7 +8874,7 @@ textarea {
   z-index: 1;
   cursor: pointer;
   background: none;
-  right: 0;
+  left: 0;
 }
 .input-clear-button:after {
   content: '';
@@ -8895,7 +8915,7 @@ textarea {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #727272;
-  right: 2px;
+  left: 2px;
 }
 .input-dropdown-wrap select,
 .input-dropdown select,
@@ -9067,8 +9087,8 @@ textarea {
   width: auto;
   max-width: 75%;
   pointer-events: none;
-  -webkit-transform-origin: left;
-  transform-origin: left;
+  -webkit-transform-origin: right;
+  transform-origin: right;
 }
 .md .item-floating-label ~ .item-input-wrap input::-webkit-input-placeholder,
 .md .item-floating-label ~ .item-input-wrap textarea::-webkit-input-placeholder {
@@ -9135,7 +9155,7 @@ textarea {
 .md .inline-label .item-label + .item-input-wrap,
 .md .inline-labels .item-floating-label + .item-input-wrap,
 .md .inline-label .item-floating-label + .item-input-wrap {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .item-input-with-error-message,
 .md .item-input-with-info,
@@ -9158,8 +9178,8 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  left: 0;
-  right: 16px;
+  right: 0;
+  left: 16px;
 }
 .md .item-input-info,
 .md .input-info {
@@ -9405,7 +9425,7 @@ textarea {
 }
 .md .item-input-focused.color-green .item-input-wrap:after,
 .md .input-after.color-green:after {
-  background: #f44336;
+  background: #4caf50;
 }
 .md .item-input-focused.color-blue .item-label,
 .md .item-input-focused.color-blue .item-floating-label {
@@ -9413,7 +9433,7 @@ textarea {
 }
 .md .item-input-focused.color-blue .item-input-wrap:after,
 .md .input-after.color-blue:after {
-  background: #f44336;
+  background: #2196f3;
 }
 .md .item-input-focused.color-pink .item-label,
 .md .item-input-focused.color-pink .item-floating-label {
@@ -9421,7 +9441,7 @@ textarea {
 }
 .md .item-input-focused.color-pink .item-input-wrap:after,
 .md .input-after.color-pink:after {
-  background: #f44336;
+  background: #e91e63;
 }
 .md .item-input-focused.color-yellow .item-label,
 .md .item-input-focused.color-yellow .item-floating-label {
@@ -9429,7 +9449,7 @@ textarea {
 }
 .md .item-input-focused.color-yellow .item-input-wrap:after,
 .md .input-after.color-yellow:after {
-  background: #f44336;
+  background: #ffeb3b;
 }
 .md .item-input-focused.color-orange .item-label,
 .md .item-input-focused.color-orange .item-floating-label {
@@ -9437,7 +9457,7 @@ textarea {
 }
 .md .item-input-focused.color-orange .item-input-wrap:after,
 .md .input-after.color-orange:after {
-  background: #f44336;
+  background: #ff9800;
 }
 .md .item-input-focused.color-gray .item-label,
 .md .item-input-focused.color-gray .item-floating-label {
@@ -9445,7 +9465,7 @@ textarea {
 }
 .md .item-input-focused.color-gray .item-input-wrap:after,
 .md .input-after.color-gray:after {
-  background: #f44336;
+  background: #9e9e9e;
 }
 .md .item-input-focused.color-white .item-label,
 .md .item-input-focused.color-white .item-floating-label {
@@ -9453,7 +9473,7 @@ textarea {
 }
 .md .item-input-focused.color-white .item-input-wrap:after,
 .md .input-after.color-white:after {
-  background: #f44336;
+  background: #ffffff;
 }
 .md .item-input-focused.color-black .item-label,
 .md .item-input-focused.color-black .item-floating-label {
@@ -9461,7 +9481,7 @@ textarea {
 }
 .md .item-input-focused.color-black .item-input-wrap:after,
 .md .input-after.color-black:after {
-  background: #f44336;
+  background: #000000;
 }
 /* === Checkbox === */
 .icon-checkbox,
@@ -9552,7 +9572,7 @@ label.item-checkbox.disabled,
   z-index: 0;
 }
 .md label.item-checkbox > .icon-checkbox {
-  margin-right: 38px;
+  margin-left: 38px;
 }
 .md label.item-checkbox .item-content .item-media,
 .md label.item-checkbox.item-content .item-media {
@@ -9826,7 +9846,7 @@ label.item-radio.disabled,
   z-index: 0;
 }
 .md label.item-radio > .icon-radio {
-  margin-right: 38px;
+  margin-left: 38px;
 }
 .md label.item-radio .item-content .item-media,
 .md label.item-radio.item-content .item-media {
@@ -10189,8 +10209,8 @@ label.item-radio.disabled,
   background: rgba(33, 150, 243, 0.5);
 }
 .md .toggle input[type="checkbox"]:checked + .toggle-icon:after {
-  -webkit-transform: translateX(16px);
-  transform: translateX(16px);
+  -webkit-transform: translateX(-16px);
+  transform: translateX(-16px);
   background: #2196f3;
 }
 .md .toggle-icon {
@@ -10206,7 +10226,7 @@ label.item-radio.disabled,
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  left: 0;
+  right: 0;
 }
 .md .color-theme-red .toggle input[type="checkbox"]:checked + .toggle-icon {
   background: rgba(244, 67, 54, 0.5);
@@ -10342,7 +10362,7 @@ label.item-radio.disabled,
 }
 .range-bar-active {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   height: 100%;
 }
@@ -10350,7 +10370,7 @@ label.item-radio.disabled,
   z-index: 20;
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
 }
 .range-knob {
   -webkit-box-sizing: border-box;
@@ -10406,7 +10426,7 @@ label.item-radio.disabled,
   height: 12px;
   width: 12px;
   margin-top: -6px;
-  margin-left: -6px;
+  margin-right: -6px;
 }
 .md .range-knob {
   background: #2196f3;
@@ -10690,7 +10710,7 @@ label.item-radio.disabled,
 .md .stepper-button + .stepper-button-plus,
 .md .stepper-button-minus + .stepper-button-plus,
 .md .stepper-button-plus + .stepper-button-plus {
-  border-left: none;
+  border-right: none;
 }
 .md .stepper-button.active-state,
 .md .stepper-button-minus.active-state,
@@ -10700,12 +10720,12 @@ label.item-radio.disabled,
 .md .stepper-button:first-child,
 .md .stepper-button-minus:first-child,
 .md .stepper-button-plus:first-child {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 4px 4px 0;
 }
 .md .stepper-button:last-child,
 .md .stepper-button-minus:last-child,
 .md .stepper-button-plus:last-child {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px 0 0 4px;
 }
 .md .stepper-button-plus:after,
 .md .stepper-button-minus:after,
@@ -10765,7 +10785,7 @@ label.item-radio.disabled,
 .md .stepper-fill-md .stepper-button + .stepper-button,
 .md .stepper-fill .stepper-button-minus + .stepper-button-plus,
 .md .stepper-fill-md .stepper-button-minus + .stepper-button-plus {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .md .stepper-fill.stepper-big .stepper-button,
 .md .stepper-fill-md.stepper-big .stepper-button,
@@ -10839,7 +10859,7 @@ label.item-radio.disabled,
 .md .stepper-big-md .stepper-button-minus:first-child,
 .md .stepper-big .stepper-button-plus:first-child,
 .md .stepper-big-md .stepper-button-plus:first-child {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 4px 4px 0;
 }
 .md .stepper-big .stepper-button:last-child,
 .md .stepper-big-md .stepper-button:last-child,
@@ -10847,7 +10867,7 @@ label.item-radio.disabled,
 .md .stepper-big-md .stepper-button-minus:last-child,
 .md .stepper-big .stepper-button-plus:last-child,
 .md .stepper-big-md .stepper-button-plus:last-child {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px 0 0 4px;
 }
 .md .stepper-round .stepper-button:first-child,
 .md .stepper-round-md .stepper-button:first-child,
@@ -10855,7 +10875,7 @@ label.item-radio.disabled,
 .md .stepper-round-md .stepper-button-minus:first-child,
 .md .stepper-round .stepper-button-plus:first-child,
 .md .stepper-round-md .stepper-button-plus:first-child {
-  border-radius: 36px 0 0 36px;
+  border-radius: 0 36px 36px 0;
 }
 .md .stepper-round .stepper-button:last-child,
 .md .stepper-round-md .stepper-button:last-child,
@@ -10863,7 +10883,7 @@ label.item-radio.disabled,
 .md .stepper-round-md .stepper-button-minus:last-child,
 .md .stepper-round .stepper-button-plus:last-child,
 .md .stepper-round-md .stepper-button-plus:last-child {
-  border-radius: 0 36px 36px 0;
+  border-radius: 36px 0 0 36px;
 }
 .md .stepper-raised {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -10894,7 +10914,7 @@ label.item-radio.disabled,
 }
 .md .stepper-raised .stepper-button + .stepper-button,
 .md .stepper-raised .stepper-button-minus + .stepper-button-plus {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .md .color-theme-red .stepper-button,
 .md .color-theme-red .stepper-button-minus,
@@ -13685,10 +13705,10 @@ label.item-radio.disabled,
   top: 0;
 }
 .picker-column.picker-column-first:before {
-  right: 100%;
+  left: 100%;
 }
 .picker-column.picker-column-last:after {
-  left: 100%;
+  right: 100%;
 }
 .picker-column.picker-column-left {
   text-align: left;
@@ -14009,7 +14029,7 @@ label.item-radio.disabled,
   padding: 0;
   margin: 0;
   border-collapse: collapse;
-  text-align: left;
+  text-align: right;
 }
 .data-table thead {
   font-size: 12px;
@@ -14033,7 +14053,7 @@ label.item-radio.disabled,
 }
 .data-table th.numeric-cell,
 .data-table td.numeric-cell {
-  text-align: right;
+  text-align: left;
 }
 .data-table th.checkbox-cell,
 .data-table td.checkbox-cell {
@@ -14041,11 +14061,11 @@ label.item-radio.disabled,
 }
 .data-table th.checkbox-cell label + span,
 .data-table td.checkbox-cell label + span {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .data-table th.actions-cell,
 .data-table td.actions-cell {
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
 }
 .data-table th a.icon-only,
@@ -14134,7 +14154,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   display: flex;
 }
 .data-table .data-table-actions {
-  margin-left: auto;
+  margin-right: auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -14196,10 +14216,10 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   position: relative;
   font-size: 12px;
   overflow: hidden;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 .data-table .data-table-rows-select,
 .data-table .data-table-pagination {
@@ -14243,7 +14263,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    text-align: left;
+    text-align: right;
   }
   .data-table.data-table-collapsible td:before {
     display: none !important;
@@ -14258,7 +14278,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
     -webkit-transform: none !important;
     transform: none !important;
     font-size: 12px;
-    margin-right: 16px;
+    margin-left: 16px;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -14266,13 +14286,13 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   .data-table.data-table-collapsible td.checkbox-cell {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
   }
   .data-table.data-table-collapsible td.checkbox-cell + td {
-    padding-left: 16px;
+    padding-right: 16px;
   }
   .data-table.data-table-collapsible td.checkbox-cell ~ td {
-    margin-left: 32px;
+    margin-right: 32px;
   }
 }
 .data-table .tablet-only,
@@ -14333,23 +14353,23 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .md .data-table th:first-child,
 .md .data-table td:first-child {
-  padding-left: 24px;
+  padding-right: 24px;
 }
 .md .data-table th:last-child,
 .md .data-table td:last-child {
-  padding-right: 24px;
+  padding-left: 24px;
 }
 .md .data-table th.checkbox-cell,
 .md .data-table td.checkbox-cell {
   width: 18px;
-  padding-left: 24px;
-  padding-right: 12px;
+  padding-right: 24px;
+  padding-left: 12px;
 }
 .md .data-table th.checkbox-cell + td,
 .md .data-table td.checkbox-cell + td,
 .md .data-table th.checkbox-cell + th,
 .md .data-table td.checkbox-cell + th {
-  padding-left: 12px;
+  padding-right: 12px;
 }
 .md .data-table th.actions-cell a.link,
 .md .data-table td.actions-cell a.link {
@@ -14357,7 +14377,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .md .data-table th.actions-cell a.link + a.link,
 .md .data-table td.actions-cell a.link + a.link {
-  margin-left: 24px;
+  margin-right: 24px;
 }
 .md .data-table th.actions-cell a.icon-only,
 .md .data-table td.actions-cell a.icon-only {
@@ -14366,17 +14386,17 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   line-height: 24px;
 }
 .md .sortable-cell:not(.numeric-cell):after {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .sortable-cell.numeric-cell:before {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 .md .data-table.card .card-header,
 .md .card .data-table .card-header,
 .md .data-table.card .card-footer,
 .md .card .data-table .card-footer {
-  padding-left: 24px;
-  padding-right: 14px;
+  padding-right: 24px;
+  padding-left: 14px;
 }
 .md .data-table.card .card-footer,
 .md .card .data-table .card-footer {
@@ -14387,7 +14407,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .md .data-table-links a.link + a.link,
 .md .data-table-actions a.link + a.link {
-  margin-left: 24px;
+  margin-right: 24px;
 }
 .md .data-table-actions a.link {
   color: rgba(0, 0, 0, 0.54);
@@ -14402,10 +14422,10 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .md .data-table .card-header > .data-table-header,
 .md .data-table .card-header > .data-table-header-selected {
-  padding-left: 24px;
-  padding-right: 14px;
-  margin-left: -24px;
-  margin-right: -14px;
+  padding-right: 24px;
+  padding-left: 14px;
+  margin-right: -24px;
+  margin-left: -14px;
   padding-top: 4px;
   padding-bottom: 4px;
   height: 100%;
@@ -14476,13 +14496,13 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   transition-duration: 150ms;
 }
 .md .data-table-rows-select + .data-table-pagination {
-  margin-left: 32px;
+  margin-right: 32px;
 }
 .md .data-table-rows-select .input {
-  margin-left: 24px;
+  margin-right: 24px;
 }
 .md .data-table-pagination-label {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .md .data-table-footer:before {
   content: '';
@@ -14850,11 +14870,6 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .fab-buttons-left {
   right: 100%;
   margin-right: 16px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
 }
 .fab-buttons-left a {
   -webkit-transform: translate3d(8px, 0px, 0) scale(0.3);
@@ -14868,6 +14883,11 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .fab-buttons-right {
   left: 100%;
   margin-left: 16px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .fab-buttons-right a {
   -webkit-transform: translate3d(-8px, 0, 0) scale(0.3);
@@ -15502,8 +15522,8 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .md .searchbar input[type="search"],
 .md .searchbar input[type="text"] {
-  padding-left: 65px;
-  padding-right: 48px;
+  padding-right: 65px;
+  padding-left: 48px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -15549,7 +15569,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   position: absolute;
   width: 48px;
   height: 48px;
-  left: -4px;
+  right: -4px;
   top: 50%;
   margin-top: -24px;
   background-size: 24px 24px;
@@ -15566,7 +15586,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   transform: rotate(-90deg) scale(0.5);
   font-size: 0 !important;
   display: block;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23737373'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23737373'%2F%3E%3C%2Fsvg%3E");
 }
 .md .searchbar-disable-button:before {
   content: '';
@@ -15611,7 +15631,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   background-position: center;
   background-size: 24px 24px;
   background-color: transparent;
-  right: 0;
+  left: 0;
 }
 .md .searchbar .input-clear-button:before {
   content: '';
@@ -15677,7 +15697,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .md .page > .searchbar input[type="text"],
 .md .subnavbar .searchbar input[type="text"],
 .md .searchbar-expandable input[type="text"] {
-  padding-left: 73px;
+  padding-right: 73px;
 }
 .md .page > .searchbar .searchbar-icon,
 .md .subnavbar .searchbar .searchbar-icon,
@@ -15685,7 +15705,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .md .page > .searchbar .searchbar-disable-button,
 .md .subnavbar .searchbar .searchbar-disable-button,
 .md .searchbar-expandable .searchbar-disable-button {
-  left: 4px;
+  right: 4px;
 }
 .md .searchbar-expandable {
   width: 56px;
@@ -15695,21 +15715,21 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   margin-top: -28px;
   -webkit-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
-  left: 100%;
-  margin-left: -56px;
+  right: 100%;
+  margin-right: -56px;
 }
 .md .navbar .searchbar-expandable {
   border-radius: 28px;
   width: 56px;
   margin-top: -28px;
-  margin-left: -56px;
+  margin-right: -56px;
 }
 @media (min-width: 768px) {
   .md .navbar .searchbar-expandable {
     border-radius: 32px;
     width: 64px;
     margin-top: -32px;
-    margin-left: -64px;
+    margin-right: -64px;
   }
 }
 .md .toolbar .searchbar-expandable,
@@ -15717,13 +15737,13 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   border-radius: 24px;
   width: 48px;
   margin-top: -24px;
-  margin-left: -48px;
+  margin-right: -56px;
 }
 .md .tabbar-labels .searchbar-expandable {
   border-radius: 36px;
   width: 72px;
   margin-top: -36px;
-  margin-left: -72px;
+  margin-right: -72px;
 }
 .md .searchbar-expandable.searchbar-enabled {
   width: 100%;
@@ -15732,8 +15752,8 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   pointer-events: auto;
   top: 0;
   margin-top: 0;
-  left: 0;
-  margin-left: 0;
+  right: 0;
+  margin-right: 0;
 }
 .md .page > .searchbar ~ * .page-content,
 .md .page > .searchbar ~ .page-content {
@@ -15816,14 +15836,6 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
     padding-left: constant(safe-area-inset-left);
     padding-left: env(safe-area-inset-left);
   }
-  .md.device-iphone-x .ios-left-edge .searchbar-disable-button,
-  .md.device-iphone-x .ios-edges .searchbar-disable-button,
-  .md.device-iphone-x .popup .searchbar-disable-button,
-  .md.device-iphone-x .sheet-modal .searchbar-disable-button,
-  .md.device-iphone-x .panel-left .searchbar-disable-button {
-    left: calc(4px + constant(safe-area-inset-left));
-    left: calc(4px + env(safe-area-inset-left));
-  }
   .md.device-iphone-x .ios-right-edge .searchbar-inner,
   .md.device-iphone-x .ios-edges .searchbar-inner,
   .md.device-iphone-x .popup .searchbar-inner,
@@ -15831,6 +15843,14 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   .md.device-iphone-x .panel-right .searchbar-inner {
     padding-right: constant(safe-area-inset-right);
     padding-right: env(safe-area-inset-right);
+  }
+  .md.device-iphone-x .ios-right-edge .searchbar-disable-button,
+  .md.device-iphone-x .ios-edges .searchbar-disable-button,
+  .md.device-iphone-x .popup .searchbar-disable-button,
+  .md.device-iphone-x .sheet-modal .searchbar-disable-button,
+  .md.device-iphone-x .panel-right .searchbar-disable-button {
+    right: calc(4px + constant(safe-area-inset-right));
+    right: calc(4px + env(safe-area-inset-right));
   }
 }
 /* === Messages === */
@@ -15936,6 +15956,16 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .message-sent {
   text-align: right;
   -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+.message-received {
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
@@ -15944,24 +15974,17 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
-.message-received {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
 .message-received .message-content {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-.message-sent .message-content {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+.message-sent .message-content {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .message:not(.message-last) .message-avatar {
   opacity: 0;
@@ -16153,7 +16176,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   opacity: 0.6;
 }
 .md .message-typing-indicator > div + div {
-  margin-left: 6px;
+  margin-right: 6px;
 }
 .md .message-typing-indicator > div:nth-child(1) {
   -webkit-animation: md-message-typing-indicator 900ms infinite;
@@ -16236,6 +16259,11 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 .toolbar.messagebar .toolbar-inner {
   position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .toolbar.messagebar .messagebar-area {
   width: 100%;
@@ -16293,7 +16321,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   height: 100%;
 }
 .messagebar-attachment + .messagebar-attachment {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .messagebar-sheet {
   overflow: auto;
@@ -16332,7 +16360,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   overflow: hidden;
   height: 125px;
   width: 125px;
-  margin-left: 1px;
+  margin-right: 1px;
 }
 @media (orientation: landscape) {
   .messagebar-sheet-image,
@@ -17906,7 +17934,7 @@ html.with-statusbar.device-iphone-x .notification {
   position: absolute;
   z-index: 500;
   width: 100%;
-  left: 0;
+  right: 0;
 }
 .autocomplete-dropdown .autocomplete-dropdown-inner {
   position: relative;
@@ -17948,20 +17976,20 @@ html.with-statusbar.device-iphone-x .notification {
   overflow: hidden;
 }
 .list .item-content-dropdown-expanded .item-title.item-label + .item-input-wrap {
-  margin-left: 0;
+  margin-right: 0;
 }
 .list .item-content-dropdown-expanded .item-input-wrap {
   width: 100%;
 }
 .md .autocomplete-page .navbar .autocomplete-preloader {
-  margin-right: 16px;
+  margin-left: 16px;
 }
 .md .autocomplete-dropdown {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 .md .autocomplete-dropdown .autocomplete-preloader {
-  right: 16px;
+  left: 16px;
   margin-bottom: 8px;
 }
 .md .autocomplete-dropdown .autocomplete-preloader .preloader-inner-gap,
@@ -17976,7 +18004,7 @@ html.with-statusbar.device-iphone-x .notification {
   color: #212121;
 }
 .md .searchbar-input-wrap .autocomplete-dropdown .item-content {
-  padding-left: 73px;
+  padding-right: 73px;
 }
 .md .searchbar-input-wrap .autocomplete-dropdown li:last-child {
   border-radius: 0 0 8px 8px;

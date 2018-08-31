@@ -41,6 +41,7 @@ var app = new Framework7({
           app.layers.image.setVisible(false);
         },
         opened: function() {
+          $$("#gps-btn").removeClass("disabled");
           app.geolocation.setTracking(true);
         }
       }
@@ -610,6 +611,7 @@ app.map.on("moveend", function(evt) {
 app.geolocation.on("error", function(error) {
   app.dialog.alert(error.message, "Geolocation error");
   $$("#gps-icon").html("gps_not_fixed");
+  $$("#gps-btn").addClass("disabled");
 });
 
 app.geolocation.on("change:position", function() {
