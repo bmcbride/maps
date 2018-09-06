@@ -25,12 +25,12 @@ const PRECACHE_URLS = [
   'assets/img/android-chrome-192x192.png',
   'assets/img/crosshair.svg',
   'assets/vendor/framework7-3.2.1/css/framework7.min.css',
-  'assets/vendor/openlayers-5.1.3/ol.css',
+  'assets/vendor/openlayers-5.2.0/ol.css',
   'assets/css/app.css',
   'assets/fonts/MaterialIcons-Regular.woff2',
   'assets/vendor/framework7-3.2.1/js/framework7.min.js',
   'assets/vendor/localForage-1.7.1/localforage.min.js',
-  'assets/vendor/openlayers-5.1.3/ol.js',
+  'assets/vendor/openlayers-5.2.0/ol.js',
   'assets/vendor/proj4js-2.4.3/proj4.js',
   'assets/js/app.js'
 ];
