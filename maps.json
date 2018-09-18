@@ -78,4 +78,12 @@
   "size": "436 KB",
   "projection": ["EPSG:2260","+proj=tmerc +lat_0=38.83333333333334 +lon_0=-74.5 +k=0.9999 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs"],
   "extent": [679476.228, 1434076.371, 683877.638, 1437476.910]
+}, {
+  "name": "Niskayuna Topo",
+  "description": "US Topo, half size, 25% jpg quality- for testing.",
+  "attribution": "<a href=\"https://www.usgs.gov/core-science-systems/national-geospatial-program/us-topo-maps-america\">US Topo</a>",
+  "url": "maps/nisky-topo.jpg",
+  "size": "1.8 MB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [589905.780, 4731363.950, 604286.032, 4749246.469]
 }]
