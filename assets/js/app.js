@@ -604,7 +604,7 @@ app.once("popoverOpen", function (e) {
 
 app.map.on("moveend", function(evt) {
   var settings = JSON.parse(sessionStorage.getItem("settings"));
-  settings.state = app.map.getView().getState();
+  settings.state = app.map.getView().getState(window.devicePixelRatio);
   sessionStorage.setItem("settings", JSON.stringify(settings));
 });
 
