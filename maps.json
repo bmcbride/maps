@@ -86,4 +86,12 @@
   "size": "1.8 MB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
   "extent": [589905.780, 4731363.950, 604286.032, 4749246.469]
+}, {
+  "name": "Tioughnioga WMA",
+  "description": "This WMA totals 3,744 acres and is located in southwestern Madison County between the villages of New Woodstock and Erieville, about six miles southeast of Cazenovia.",
+  "attribution": "<a href=\"https://www.dec.ny.gov/outdoor/69633.html\">NYS DEC</a>",
+  "url": "maps/tiough.jpg",
+  "size": "245 KB",
+  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
+  "extent": [431981.250, 4739765.227, 438243.639, 4747869.617]
 }]
