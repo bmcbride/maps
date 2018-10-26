@@ -40,9 +40,21 @@ var app = new Framework7({
           app.geolocation.setTracking(false);
           app.layers.image.setVisible(false);
         },
-        opened: function() {
+        open: function() {
+          app.preloader.show();
+        },
+        opened: function(e) {
           $$("#gps-btn").removeClass("disabled");
           app.geolocation.setTracking(true);
+          if (app.activeLayer) {
+            setMap(app.activeLayer.toString());  
+          } else if (sessionStorage.getItem("settings")) {
+            var settings = JSON.parse(sessionStorage.getItem("settings"));
+            setMap(settings.activeLayer, settings);
+            if (settings.basemap) {
+              $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
+            }
+          }
         }
       }
     }
@@ -52,13 +64,7 @@ var app = new Framework7({
       loadSavedMaps();
       loadAvailableMaps();
       if (window.location.hash.substr(2) == "/map/") {
-        if (sessionStorage.getItem("settings")) {
-          var settings = JSON.parse(sessionStorage.getItem("settings"));
-          setMap(settings.activeLayer, settings);
-          if (settings.basemap) {
-            $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
-          }
-        } else {
+        if (!sessionStorage.getItem("settings")) {
           setTimeout(function() {
             app.views.main.router.back();
           }, 300);
@@ -324,7 +330,7 @@ function decreaseOpacity() {
 }
 
 function setMap(key, settings) {
-  app.progressbar.show("white");
+  // app.progressbar.show("white");
   $$("#rotate-btn").css("display", "none");
   app.mapStore.getItem(key).then(function(value) {
     $$("#map-title").html(value.name);
@@ -384,7 +390,8 @@ function setMap(key, settings) {
 
     app.layers.image.setVisible(true);
     app.map.updateSize();
-    app.progressbar.hide();
+    // app.progressbar.hide();
+    app.preloader.hide();
 
     sessionStorage.setItem("settings", JSON.stringify({
       activeLayer: key,
@@ -450,7 +457,7 @@ function loadSavedMaps() {
     });
     for (var i = 0; i < maps.length; i++) {
       var li = `<li class="saved-map">
-        <a href="#" class="item-link item-content no-chevron" name="map" data-key="${maps[i].key}" onclick="app.router.navigate('/map/'); setMap('${maps[i].key}');">
+        <a href="#" class="item-link item-content no-chevron" name="map" data-key="${maps[i].key}" onclick="app.activeLayer = ${maps[i].key}; app.router.navigate('/map/');">
           <div class="item-inner">
             <div class="item-title">
               ${maps[i].name}
