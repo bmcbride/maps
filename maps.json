@@ -102,4 +102,20 @@
   "size": "531 KB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
   "extent": [429876.418, 4739832.609, 439949.226, 4747616.143]
+}, {
+  "name": "MOHAWK RIVER - SCHENECTADY",
+  "description": "NOAA Chart 14786_76",
+  "attribution": "<a href=\"http://www.charts.noaa.gov\">NOAA</a>",
+  "url": "maps/14786_76.jpg",
+  "size": "1.1 MB",
+  "projection": ["EPSG:3395","+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"],
+  "extent": [-8232568.613, 5253795.809, -8220971.116, 5261202.439]
+}, {
+  "name": "MOHAWK RIVER - VISCHER FERRY",
+  "description": "NOAA Chart 14786_77",
+  "attribution": "<a href=\"http://www.charts.noaa.gov\">NOAA</a>",
+  "url": "maps/14786_77.jpg",
+  "size": "777 KB",
+  "projection": ["EPSG:3395","+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"],
+  "extent": [-8222592.999, 5247654.447, -8211036.828, 5255125.871]
 }]
