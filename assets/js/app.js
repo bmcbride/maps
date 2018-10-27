@@ -63,6 +63,7 @@ var app = new Framework7({
     init: function() {
       loadSavedMaps();
       loadAvailableMaps();
+      iosHomeScreen();
       if (window.location.hash.substr(2) == "/map/") {
         if (!sessionStorage.getItem("settings")) {
           setTimeout(function() {
@@ -336,13 +337,13 @@ function setMap(key, settings) {
     $$("#map-title").html(value.name);
     var blob = new Blob([value.image]);
 
-    var projection = proj4.defs(value.projection[0],value.projection[1]);
+    proj4.defs(value.projection[0],value.projection[1]);
     ol.proj.proj4.register(proj4);
 
     app.layers.image.setSource(
       new ol.source.ImageStatic({
         url: window.URL.createObjectURL(blob),
-        projection: projection,
+        projection: value.projection[0],
         imageExtent: value.extent,
         attributions: value.attribution.replace("<a", "<a class='external'")
       })
@@ -493,6 +494,22 @@ function loadSavedMaps() {
   });
 }
 
+function iosHomeScreen() {
+  if (app.device.ios && (("standalone" in window.navigator) && (!window.navigator.standalone))) {
+    if (!localStorage.getItem("dismissPrompt")) {
+      app.toast.create({
+        text: "Tap the <img src='assets/img/ios-share.png' height='18px'> button below to Add to Home Screen.",
+        closeButton: true,
+        on: {
+          close: function () {
+            localStorage.setItem("dismissPrompt", true);
+          }
+        }
+      }).open(); 
+    }
+  }
+}
+
 function saveMap(config) {
   if (navigator.onLine) {
     app.dialog.confirm("Save <b>" + config.name + "</b> to your device?", "Confirm", function() {
@@ -546,6 +563,7 @@ function deleteMap(key) {
 function deleteAllMaps() {
   app.dialog.confirm("Are you sure you want to remove all saved maps from your device?", "Remove saved maps", function() {
     sessionStorage.removeItem("settings");
+    localStorage.removeItem("dismissPrompt");
     app.mapStore.clear().then(function() {
       loadSavedMaps();
     });
