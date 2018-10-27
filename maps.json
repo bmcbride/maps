@@ -107,15 +107,15 @@
   "description": "NOAA Chart 14786_76",
   "attribution": "<a href=\"http://www.charts.noaa.gov\">NOAA</a>",
   "url": "maps/14786_76.jpg",
-  "size": "1.1 MB",
-  "projection": ["EPSG:3395","+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"],
-  "extent": [-8232568.613, 5253795.809, -8220971.116, 5261202.439]
+  "size": "1.8 MB",
+  "projection": ["EPSG:3857","+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"],
+  "extent": [-8232568.613, 5282840.892, -8220971.037, 5290274.347]
 }, {
   "name": "MOHAWK RIVER - VISCHER FERRY",
   "description": "NOAA Chart 14786_77",
   "attribution": "<a href=\"http://www.charts.noaa.gov\">NOAA</a>",
   "url": "maps/14786_77.jpg",
-  "size": "777 KB",
-  "projection": ["EPSG:3395","+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"],
-  "extent": [-8222592.999, 5247654.447, -8211036.828, 5255125.871]
+  "size": "1.2 MB",
+  "projection": ["EPSG:3857","+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"],
+  "extent": [-8222592.999, 5276677.304, -8211036.557, 5284175.759]
 }]
