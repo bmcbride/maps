@@ -88,12 +88,12 @@
   "extent": [592623.244, 4732571.102, 599224.400, 4737411.950]
 }, {
   "name": "Panther Creek Club",
-  "description": "QGIS export test at 1:25,000 and 150 DPI",
+  "description": "2015 - Brian Hathaway GPS data over topo",
   "attribution": "<a href=\"http://bryanmcbride.com\">bryanmcbride.com</a>",
-  "url": "maps/pcc.jpg",
-  "size": "648 KB",
-  "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
-  "extent": [476708.816, 4874425.040, 481387.531, 4877856.098]
+  "url": "maps/pcc_2015.jpg",
+  "size": "1.2 MB",
+  "projection": ["EPSG:3857","+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"],
+  "extent": [-8380170.063, 5469960.18, -8375845.267, 5472815.797]
 }, {
   "name": "Tioughnioga WMA (DEC)",
   "description": "This WMA totals 3,744 acres and is located in southwestern Madison County between the villages of New Woodstock and Erieville, about six miles southeast of Cazenovia.",
