@@ -61,9 +61,9 @@ var app = new Framework7({
   }],
   on: {
     init: function() {
+      iosChecks();
       loadSavedMaps();
       loadAvailableMaps();
-      iosHomeScreen();
       if (window.location.hash.substr(2) == "/map/") {
         if (!sessionStorage.getItem("settings")) {
           setTimeout(function() {
@@ -494,18 +494,23 @@ function loadSavedMaps() {
   });
 }
 
-function iosHomeScreen() {
-  if (app.device.ios && (("standalone" in window.navigator) && (!window.navigator.standalone))) {
-    if (!localStorage.getItem("dismissPrompt")) {
-      app.toast.create({
-        text: "Tap the <img src='assets/img/ios-share.png' height='18px'> button below to Add to Home Screen.",
-        closeButton: true,
-        on: {
-          close: function () {
-            localStorage.setItem("dismissPrompt", true);
+function iosChecks() {
+  if (app.device.ios) {
+    if (parseFloat(app.device.osVersion) < 11.3) {
+      app.dialog.alert("This app is not fully supported on devices running iOS < 11.3.", "Warning");
+    }
+    if (!app.device.standalone) {
+      if (!localStorage.getItem("dismissPrompt")) {
+        app.toast.create({
+          text: "Tap the <img src='assets/img/ios-share.png' height='18px'> button below to Add to Home Screen.",
+          closeButton: true,
+          on: {
+            close: function () {
+              localStorage.setItem("dismissPrompt", true);
+            }
           }
-        }
-      }).open(); 
+        }).open(); 
+      } 
     }
   }
 }
