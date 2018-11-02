@@ -502,8 +502,9 @@ function iosChecks() {
     if (!app.device.standalone) {
       if (!localStorage.getItem("dismissPrompt")) {
         app.toast.create({
-          text: "Tap the <img src='assets/img/ios-share.png' height='18px'> button below to Add to Home Screen.",
+          text: "Tap the <img src='assets/img/ios-share.png' height='18px'> button " + (app.device.ipad ? "at the top of the screen" : "below") + " to Add to Home Screen.",
           closeButton: true,
+          position: app.device.ipad ? "center" : "bottom",
           on: {
             close: function () {
               localStorage.setItem("dismissPrompt", true);
