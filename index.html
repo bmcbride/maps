@@ -28,7 +28,7 @@
             <ul>
               <li style="line-height: 100%;">
                 <div class="item-cell width-auto flex-shrink-0">
-                  <a href="#" class="link icon-only" onclick="decreaseOpacity();">
+                  <a href="#" class="link icon-only" onclick="app.functions.decreaseOpacity();">
                     <i class="icon material-icons">remove_circle_outline</i>
                   </a>
                 </div>
@@ -36,7 +36,7 @@
                   <div class="range-slider" data-label="false"></div>
                 </div>
                 <div class="item-cell width-auto flex-shrink-0">
-                  <a href="#" class="link icon-only" onclick="increaseOpacity();">
+                  <a href="#" class="link icon-only" onclick="app.functions.increaseOpacity();">
                     <i class="icon material-icons">add_circle_outline</i>
                   </a>
                 </div>
@@ -97,10 +97,10 @@
           <div class="list">
             <ul>
               <li>
-                <a class="item-link list-button popover-close" onclick="launchGmaps();">Open View in Google Maps</a>
+                <a class="item-link list-button popover-close" onclick="app.functions.launchGmaps();">Open View in Google Maps</a>
               </li>
               <li>
-                <a class="item-link list-button popover-close" onclick="startMeasurement();">Measure Distance</a>
+                <a class="item-link list-button popover-close" onclick="app.functions.startMeasurement();">Measure Distance</a>
               </li>
             </ul>
           </div>
@@ -271,7 +271,7 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content no-chevron" onclick="deleteAllMaps();">
+                    <a href="#" class="item-link item-content no-chevron" onclick="app.functions.deleteAllMaps();">
                       <div class="item-media">
                         <i class="icon material-icons">delete</i>
                       </div>
@@ -281,7 +281,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content no-chevron" onclick="setMapConfig();">
+                    <a href="#" class="item-link item-content no-chevron" onclick="app.functions.setMapConfig();">
                       <div class="item-media">
                         <i class="icon material-icons">settings</i>
                       </div>

@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 /*
  Copyright 2016 Google Inc. All Rights Reserved.
  Licensed under the Apache License, Version 2.0 (the 'License');
@@ -11,7 +10,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-11.02.18.4';
+const PRECACHE = 'precache-11.06.18.1';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
