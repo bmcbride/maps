@@ -1,6 +1,6 @@
-var $$ = Dom7;
+$$ = Dom7;
 
-var app = new Framework7({
+app = new Framework7({
   root: "#app",
   theme: "md",
   init: false,
@@ -355,6 +355,10 @@ app.functions = {
   loadAvailableMaps() {
     if (navigator.onLine) {
       $$("#map-list").empty();
+      if (app.utils.parseUrlQuery(document.URL).config) {
+        localStorage.setItem("mapConfig", app.utils.parseUrlQuery(document.URL).config);
+        window.history.replaceState(null, null, window.location.pathname);
+      }
       app.request({
         url: localStorage.getItem("mapConfig") ? localStorage.getItem("mapConfig") : "maps.json",
         method: "GET",
@@ -381,6 +385,10 @@ app.functions = {
             </li>`;
             $$("#map-list").append(li);
           }
+          app.ptr.done();
+        },
+        error: function (xhr, status) {
+          app.dialog.alert(xhr.statusText, "Map List Error");
           app.ptr.done();
         }
       });
