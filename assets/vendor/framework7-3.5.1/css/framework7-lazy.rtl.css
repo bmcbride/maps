@@ -1,5 +1,5 @@
 /**
- * Framework7 3.5.0
+ * Framework7 3.5.1
  * Full featured mobile HTML framework for building iOS & Android apps
  * http://framework7.io/
  *
@@ -7,8 +7,11 @@
  *
  * Released under the MIT License
  *
- * Released on: October 26, 2018
+ * Released on: November 2, 2018
  */
+html {
+  direction: rtl;
+}
 html,
 body,
 .framework7-root {
@@ -356,10 +359,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   z-index: -1;
   content: '';
   opacity: 0;
-  right: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  left: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
 .ios .page-opacity-effect {
   position: absolute;
@@ -380,12 +383,12 @@ html.with-statusbar.device-iphone-x .framework7-root {
   background: #efeff4;
 }
 .ios .page-previous {
-  -webkit-transform: translate3d(-20%, 0, 0);
-  transform: translate3d(-20%, 0, 0);
+  -webkit-transform: translate3d(20%, 0, 0);
+  transform: translate3d(20%, 0, 0);
 }
 .ios .page-next {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 .ios .page-previous .page-opacity-effect {
   opacity: 1;
@@ -422,10 +425,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   z-index: -1;
   content: '';
   opacity: 0;
-  right: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  left: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
   -webkit-animation: ios-page-next-to-current-shadow 400ms forwards;
   animation: ios-page-next-to-current-shadow 400ms forwards;
 }
@@ -483,10 +486,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   z-index: -1;
   content: '';
   opacity: 0;
-  right: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  left: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
   -webkit-animation: ios-page-current-to-next-shadow 400ms forwards;
   animation: ios-page-current-to-next-shadow 400ms forwards;
 }
@@ -500,8 +503,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
 }
 @-webkit-keyframes ios-page-next-to-current {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
   to {
     -webkit-transform: translate3d(0%, 0, 0);
@@ -510,8 +513,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
 }
 @keyframes ios-page-next-to-current {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
   to {
     -webkit-transform: translate3d(0%, 0, 0);
@@ -520,8 +523,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
 }
 @-webkit-keyframes ios-page-previous-to-current {
   from {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
   to {
     -webkit-transform: translate3d(0%, 0, 0);
@@ -530,8 +533,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
 }
 @keyframes ios-page-previous-to-current {
   from {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
   to {
     -webkit-transform: translate3d(0%, 0, 0);
@@ -544,8 +547,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
     transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
 }
 @keyframes ios-page-current-to-previous {
@@ -554,8 +557,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
     transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
 }
 @-webkit-keyframes ios-page-current-to-next {
@@ -564,8 +567,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
     transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes ios-page-current-to-next {
@@ -574,8 +577,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
     transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @-webkit-keyframes ios-page-next-to-current-shadow {
@@ -650,10 +653,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   z-index: -1;
   content: '';
   opacity: 0;
-  right: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  left: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
 .md .page-opacity-effect {
   position: absolute;
@@ -676,8 +679,8 @@ html.with-statusbar.device-iphone-x .framework7-root {
   pointer-events: none;
 }
 .md .page-next.page-next-on-right {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 .md .page-transitioning,
 .md .page-transitioning .page-shadow-effect,
@@ -796,7 +799,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .ios .link i + i,
 .ios .link span + i,
 .ios .link span + span {
-  margin-left: 7px;
+  margin-right: 7px;
 }
 .ios .link.active-state {
   opacity: 0.3;
@@ -807,7 +810,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .link i + i,
 .md .link span + i,
 .md .link span + span {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 /* === Navbar === */
 .navbar {
@@ -945,20 +948,20 @@ html.with-statusbar.device-iphone-x .framework7-root {
 }
 .ios .navbar .left a + a,
 .ios .navbar .right a + a {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .ios .navbar b,
 .ios .navbar .title {
   font-weight: 600;
 }
 .ios .navbar .left {
-  margin-right: 10px;
-}
-.ios .navbar .right {
   margin-left: 10px;
 }
+.ios .navbar .right {
+  margin-right: 10px;
+}
 .ios .navbar .right:first-child {
-  right: 8px;
+  left: 8px;
 }
 .ios .navbar:after {
   content: '';
@@ -1255,10 +1258,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   color: rgba(255, 255, 255, 0.85);
 }
 .md .navbar .right {
-  margin-left: auto;
+  margin-right: auto;
 }
 .md .navbar .right:first-child {
-  right: 16px;
+  left: 16px;
 }
 .md .navbar-inner {
   -webkit-box-pack: start;
@@ -1535,7 +1538,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .ios .toolbar a.link i + i,
 .ios .toolbar a.link span + i,
 .ios .toolbar a.link span + span {
-  margin-left: 7px;
+  margin-right: 7px;
 }
 .ios .toolbar a.icon-only {
   min-height: 44px;
@@ -1906,7 +1909,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .toolbar a.link i + i,
 .md .toolbar a.link span + i,
 .md .toolbar a.link span + span {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .toolbar a.icon-only {
   min-width: 0;
@@ -1949,12 +1952,13 @@ html.with-statusbar.device-iphone-x .framework7-root {
 .md .tabbar .tab-link-highlight,
 .md .tabbar-labels .tab-link-highlight {
   position: absolute;
+  left: 0;
   bottom: 0;
   height: 2px;
   background: #fff;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  left: 0;
+  right: 0;
 }
 .md .toolbar-bottom-md,
 .md .messagebar {
@@ -2371,20 +2375,20 @@ html.with-statusbar.device-iphone-x .framework7-root {
   letter-spacing: -0.03em;
 }
 .ios .subnavbar .title {
-  margin-left: 7px;
+  margin-right: 7px;
 }
 .ios .subnavbar .left a + a,
 .ios .subnavbar .right a + a {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .ios .subnavbar .left {
-  margin-right: 10px;
-}
-.ios .subnavbar .right {
   margin-left: 10px;
 }
+.ios .subnavbar .right {
+  margin-right: 10px;
+}
 .ios .subnavbar .right:first-child {
-  right: 8px;
+  left: 8px;
 }
 .ios .subnavbar a.link {
   line-height: 44px;
@@ -2499,13 +2503,13 @@ html.with-statusbar.device-iphone-x .framework7-root {
   font-weight: 500;
 }
 .md .subnavbar .title:first-child {
-  margin-left: 56px;
+  margin-right: 56px;
 }
 .md .subnavbar .right {
-  margin-left: auto;
+  margin-right: auto;
 }
 .md .subnavbar .right:first-child {
-  right: 16px;
+  left: 16px;
 }
 .md .subnavbar a {
   color: inherit;
@@ -2552,10 +2556,10 @@ html.with-statusbar.device-iphone-x .framework7-root {
   padding: 0 16px;
 }
 .md .subnavbar-inner > a.link:first-child {
-  margin-left: -16px;
+  margin-right: -16px;
 }
 .md .subnavbar-inner > a.link:last-child {
-  margin-right: -16px;
+  margin-left: -16px;
 }
 .md .subnavbar ~ * .page-content,
 .md .subnavbar ~ .page-content,
@@ -3388,7 +3392,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
+  margin-right: auto;
 }
 .list .item-link,
 .list .list-button {
@@ -3633,8 +3637,8 @@ li.media-item .chevron-center .item-link .item-inner,
 li.media-item .item-link.chevron-center .item-inner {
   background-size: 8px 13px;
   background-repeat: no-repeat;
-  background-position: 95% center;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23c7c7cc'%20transform%3D'translate(1.500000%2C%206.500000)%20rotate(-45.000000)%20translate(-1.500000%2C%20-6.500000)%20'%20points%3D'6%2011%206%202%204%202%204%209%20-3%209%20-3%2011%205%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-position: 15px center;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23c7c7cc'%20transform%3D'translate(6.500000%2C%206.500000)%20rotate(-225.000000)%20translate(-6.500000%2C%20-6.500000)%20'%20points%3D'11%2011%2011%202%209%202%209%209%202%209%202%2011%2010%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 .links-list.no-chevron a,
 .no-chevron .links-list a,
@@ -3657,7 +3661,7 @@ li.media-item .item-link .item-inner {
 }
 .media-list .item-link .item-title-row,
 li.media-item .item-link .item-title-row {
-  background-position: right center !important;
+  background-position: left center !important;
 }
 .list-group ul:after,
 .list-group ul:before {
@@ -3716,7 +3720,7 @@ li.list-group-title:before {
 .theme-dark .media-list .item-link .item-title-row,
 .media-list.theme-dark .item-link .item-title-row,
 .theme-dark li.media-item .item-link .item-title-row {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23434345'%20transform%3D'translate(1.500000%2C%206.500000)%20rotate(-45.000000)%20translate(-1.500000%2C%20-6.500000)%20'%20points%3D'6%2011%206%202%204%202%204%209%20-3%209%20-3%2011%205%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'8px'%20height%3D'13px'%20viewBox%3D'0%200%208%2013'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpolygon%20fill%3D'%23434345'%20transform%3D'translate(6.500000%2C%206.500000)%20rotate(-225.000000)%20translate(-6.500000%2C%20-6.500000)%20'%20points%3D'11%2011%2011%202%209%202%209%209%202%209%202%2011%2010%2011'%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 .theme-dark .media-list .item-link .item-inner,
 .media-list.theme-dark .item-link .item-inner,
@@ -3730,34 +3734,34 @@ li.list-group-title:before {
 .ios .list .item-cell {
   width: 100%;
   min-width: 0;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .ios .list .item-cell:first-child {
-  margin-left: 0;
+  margin-right: 0;
 }
 .ios .list ul {
   background: #fff;
 }
 .ios .list ul ul {
-  padding-left: 45px;
+  padding-right: 45px;
 }
 .ios .list .item-media {
   padding-top: 7px;
 }
 .ios .list .item-media i + i,
 .ios .list .item-media i + img {
-  margin-left: 5px;
+  margin-right: 5px;
 }
 .ios .list .item-media + .item-inner {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .ios .list .item-inner {
   min-height: 44px;
-  padding-right: 15px;
+  padding-left: 15px;
 }
 .ios .list .item-after {
   color: #8e8e93;
-  padding-left: 5px;
+  padding-right: 5px;
 }
 .ios .list .item-link,
 .ios .list .list-button {
@@ -3765,7 +3769,7 @@ li.list-group-title:before {
 }
 .ios .list .item-link .item-inner,
 .ios .list .list-button .item-inner {
-  padding-right: 35px;
+  padding-left: 35px;
 }
 .ios .list .item-link.active-state,
 .ios .list .list-button.active-state {
@@ -3785,7 +3789,7 @@ li.list-group-title:before {
 }
 .ios .list .item-content {
   min-height: 44px;
-  padding-left: 15px;
+  padding-right: 15px;
 }
 .ios .list .item-subtitle {
   font-size: 15px;
@@ -3810,7 +3814,7 @@ li.list-group-title:before {
 .ios .list.no-chevron .item-link .item-inner,
 .ios .list .no-chevron .item-link .item-inner,
 .ios .no-chevron .list .item-link .item-inner {
-  padding-right: 15px;
+  padding-left: 15px;
 }
 .ios .simple-list li:after {
   content: '';
@@ -3842,9 +3846,11 @@ li.list-group-title:before {
   height: 44px;
 }
 .ios .simple-list li:after {
-  width: auto;
   left: 15px;
   right: 0;
+  width: auto;
+  right: 15px;
+  left: 0;
 }
 .ios .links-list a:after {
   content: '';
@@ -3882,18 +3888,18 @@ li.list-group-title:before {
   width: auto;
 }
 .ios .links-list a {
-  padding-left: 15px;
-  padding-right: 35px;
+  padding-right: 15px;
+  padding-left: 35px;
 }
 .ios .links-list a:after {
-  left: 15px;
-  right: 0;
+  right: 15px;
+  left: 0;
 }
 .ios .links-list.no-chevron a,
 .ios .no-chevron .links-list a,
 .ios .links-list a.no-chevron,
 .ios .links-list .no-chevron a {
-  padding-right: 15px;
+  padding-left: 15px;
 }
 .ios .media-list .item-title,
 .ios li.media-item .item-title {
@@ -3911,11 +3917,11 @@ li.list-group-title:before {
 }
 .ios .media-list .item-link .item-inner,
 .ios li.media-item .item-link .item-inner {
-  padding-right: 15px;
+  padding-left: 15px;
 }
 .ios .media-list .item-link .item-title-row,
 .ios li.media-item .item-link .item-title-row {
-  padding-right: 20px;
+  padding-left: 20px;
 }
 .ios .media-list.chevron-center .item-link .item-inner,
 .ios .media-list .chevron-center .item-link .item-inner,
@@ -3923,7 +3929,7 @@ li.list-group-title:before {
 .ios li.media-item.chevron-center .item-link .item-inner,
 .ios li.media-item .item-link.chevron-center .item-inner,
 .ios li.media-item .chevron-center .item-link .item-inner {
-  padding-right: 35px;
+  padding-left: 35px;
 }
 .ios .media-list.no-chevron .item-link .item-title-row,
 .ios .no-chevron .media-list .item-link .item-title-row,
@@ -3934,11 +3940,11 @@ li.list-group-title:before {
 .ios .media-list .chevron-center .item-title-row,
 .ios li.media-item.chevron-center .item-title-row,
 .ios li.media-item .chevron-center .item-title-row {
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .ios .list .item-link .item-inner,
 .ios .links-list a {
-  background-position: calc(100% - 15px) center;
+  background-position: 15px center;
 }
 .ios .item-divider,
 .ios .list-group-title {
@@ -4196,37 +4202,143 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
   .ios.device-iphone-x .panel-left .list.inset:not(.no-ios-edges):not(.no-ios-left-edge) .block-footer {
     padding-left: 15px;
   }
-  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content {
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    background-position: calc(15px + constant(safe-area-inset-left)) center;
+    background-position: calc(15px + env(safe-area-inset-left)) center;
+  }
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner {
     padding-left: calc(15px + constant(safe-area-inset-left));
     padding-left: calc(15px + env(safe-area-inset-left));
   }
-  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after {
-    left: calc(15px + constant(safe-area-inset-left));
-    left: calc(15px + env(safe-area-inset-left));
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner {
+    padding-left: calc(35px + constant(safe-area-inset-left));
+    padding-left: calc(35px + env(safe-area-inset-left));
+  }
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner {
+    padding-left: calc(15px + constant(safe-area-inset-left));
+    padding-left: calc(15px + env(safe-area-inset-left));
   }
   .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    padding-left: calc(35px + constant(safe-area-inset-left));
+    padding-left: calc(35px + env(safe-area-inset-left));
+  }
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner {
+    padding-left: calc(35px + constant(safe-area-inset-left));
+    padding-left: calc(35px + env(safe-area-inset-left));
+  }
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a {
     padding-left: calc(15px + constant(safe-area-inset-left));
     padding-left: calc(15px + env(safe-area-inset-left));
   }
-  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after {
-    left: calc(15px + constant(safe-area-inset-left));
-    left: calc(15px + env(safe-area-inset-left));
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .ios.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .ios.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row {
+    padding-left: 0;
   }
   .ios.device-iphone-x .ios-right-edge .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
   .ios.device-iphone-x .ios-edges .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
@@ -4281,143 +4393,37 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
     padding-right: calc(15px + constant(safe-area-inset-right));
     padding-right: calc(15px + env(safe-area-inset-right));
   }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    background-position: calc(100% - 15px - constant(safe-area-inset-right)) center;
-    background-position: calc(100% - 15px - env(safe-area-inset-right)) center;
-  }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner {
+  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content {
     padding-right: calc(15px + constant(safe-area-inset-right));
     padding-right: calc(15px + env(safe-area-inset-right));
   }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner {
-    padding-right: calc(35px + constant(safe-area-inset-right));
-    padding-right: calc(35px + env(safe-area-inset-right));
-  }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner {
-    padding-right: calc(15px + constant(safe-area-inset-right));
-    padding-right: calc(15px + env(safe-area-inset-right));
+  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after {
+    right: calc(15px + constant(safe-area-inset-right));
+    right: calc(15px + env(safe-area-inset-right));
   }
   .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    padding-right: calc(35px + constant(safe-area-inset-right));
-    padding-right: calc(35px + env(safe-area-inset-right));
-  }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner {
-    padding-right: calc(35px + constant(safe-area-inset-right));
-    padding-right: calc(35px + env(safe-area-inset-right));
-  }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a {
     padding-right: calc(15px + constant(safe-area-inset-right));
     padding-right: calc(15px + env(safe-area-inset-right));
   }
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row {
-    padding-right: 0;
+  .ios.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .ios.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .ios.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .ios.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .ios.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after {
+    right: calc(15px + const(safe-area-inset-right));
+    right: calc(15px + env(safe-area-inset-right));
   }
 }
 @media (orientation: landscape) and (min-width: 768px) {
@@ -4616,16 +4622,13 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 .md .list .item-cell {
   width: 100%;
   min-width: 0;
-  margin-left: 16px;
+  margin-right: 16px;
 }
 .md .list .item-cell:first-child {
-  margin-left: 0;
-}
-.md .list .ripple-wave + .item-cell {
-  margin-left: 0;
+  margin-right: 0;
 }
 .md .list ul ul {
-  padding-left: 56px;
+  padding-right: 56px;
 }
 .md .list .item-media {
   padding-top: 8px;
@@ -4633,19 +4636,19 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 }
 .md .list .item-media i + i,
 .md .list .item-media i + img {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .list .item-media + .item-inner {
-  margin-left: 16px;
+  margin-right: 16px;
 }
 .md .list .item-inner {
   min-height: 48px;
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .list .item-after {
   color: #757575;
   font-size: 14px;
-  padding-left: 8px;
+  padding-right: 8px;
 }
 .md .list .item-link,
 .md .list .list-button {
@@ -4653,7 +4656,7 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 }
 .md .list .item-link .item-inner,
 .md .list .list-button .item-inner {
-  padding-right: 42px;
+  padding-left: 42px;
 }
 .md .list .item-link.active-state,
 .md .list .list-button.active-state {
@@ -4666,7 +4669,7 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 }
 .md .list .item-content {
   min-height: 48px;
-  padding-left: 16px;
+  padding-right: 16px;
 }
 .md .list .item-subtitle {
   font-size: 14px;
@@ -4691,7 +4694,7 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 .md .list.no-chevron .item-link .item-inner,
 .md .list .no-chevron .item-link .item-inner,
 .md .no-chevron .list .item-link .item-inner {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .simple-list li:after {
   content: '';
@@ -4724,8 +4727,8 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 }
 .md .simple-list li:after {
   width: auto;
-  left: 16px;
-  right: 0;
+  left: 0;
+  right: 16px;
 }
 .md .links-list a:after {
   content: '';
@@ -4761,18 +4764,18 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
   width: auto;
 }
 .md .links-list a {
-  padding-left: 16px;
-  padding-right: 42px;
+  padding-right: 16px;
+  padding-left: 42px;
 }
 .md .links-list a:after {
-  left: 16px;
-  right: 0;
+  right: 16px;
+  left: 0;
 }
 .md .links-list.no-chevron a,
 .md .no-chevron .links-list a,
 .md .links-list a.no-chevron,
 .md .links-list .no-chevron a {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .media-list .item-inner,
 .md li.media-item .item-inner {
@@ -4781,11 +4784,11 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 }
 .md .media-list .item-link .item-inner,
 .md li.media-item .item-link .item-inner {
-  padding-right: 16px;
+  padding-left: 16px;
 }
 .md .media-list .item-link .item-title-row,
 .md li.media-item .item-link .item-title-row {
-  padding-right: 26px;
+  padding-left: 26px;
 }
 .md .media-list .item-media,
 .md li.media-item .item-media {
@@ -4798,7 +4801,7 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 .md li.media-item.chevron-center .item-link .item-inner,
 .md li.media-item .item-link.chevron-center .item-inner,
 .md li.media-item .chevron-center .item-link .item-inner {
-  padding-right: 42px;
+  padding-left: 42px;
 }
 .md .media-list.no-chevron .item-link .item-title-row,
 .md .no-chevron .media-list .item-link .item-title-row,
@@ -4809,11 +4812,11 @@ html.device-pixel-ratio-3 .ios li:last-child li .item-inner:after {
 .md .media-list .chevron-center .item-title-row,
 .md li.media-item.chevron-center .item-title-row,
 .md li.media-item .chevron-center .item-title-row {
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .md .list .item-link .item-inner,
 .md .links-list a {
-  background-position: calc(100% - 16px) center;
+  background-position: 16px center;
 }
 .md .item-divider,
 .md .list-group-title {
@@ -5007,37 +5010,143 @@ html.device-pixel-ratio-3 .md li:last-child li .item-inner:after {
   .md.device-iphone-x .panel-left .list.inset:not(.no-ios-edges):not(.no-ios-left-edge) .block-footer {
     padding-left: 15px;
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-content {
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    background-position: calc(16px + constant(safe-area-inset-left)) center;
+    background-position: calc(16px + env(safe-area-inset-left)) center;
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-inner {
     padding-left: calc(16px + constant(safe-area-inset-left));
     padding-left: calc(16px + env(safe-area-inset-left));
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).simple-list li:after {
-    left: calc(16px + constant(safe-area-inset-left));
-    left: calc(16px + env(safe-area-inset-left));
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link .item-inner {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link .item-inner {
+    padding-left: calc(16px + constant(safe-area-inset-left));
+    padding-left: calc(16px + env(safe-area-inset-left));
   }
   .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a,
   .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .item-link.chevron-center .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item .chevron-center .item-link .item-inner {
+    padding-left: calc(42px + constant(safe-area-inset-left));
+    padding-left: calc(42px + env(safe-area-inset-left));
+  }
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .item-link.no-chevron .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) .no-chevron .item-link .item-inner,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list.no-chevron a,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a.no-chevron,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list .no-chevron a {
     padding-left: calc(16px + constant(safe-area-inset-left));
     padding-left: calc(16px + env(safe-area-inset-left));
   }
-  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after,
-  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).links-list a:after {
-    left: calc(16px + constant(safe-area-inset-left));
-    left: calc(16px + env(safe-area-inset-left));
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).media-list .no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge) li.media-item.no-chevron .item-link .item-title-row,
+  .md.device-iphone-x .ios-left-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row,
+  .md.device-iphone-x .panel-left .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-left-edge).no-chevron li.media-item .item-link .item-title-row {
+    padding-left: 0;
   }
   .md.device-iphone-x .ios-right-edge .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
   .md.device-iphone-x .ios-edges .list.inset:not(.no-ios-edges):not(.no-ios-right-edge),
@@ -5092,143 +5201,37 @@ html.device-pixel-ratio-3 .md li:last-child li .item-inner:after {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    background-position: calc(100% - 16px - constant(safe-area-inset-right)) center;
-    background-position: calc(100% - 16px - env(safe-area-inset-right)) center;
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-inner {
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-content {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link .item-inner {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link .item-inner {
-    padding-right: calc(16px + constant(safe-area-inset-right));
-    padding-right: calc(16px + env(safe-area-inset-right));
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).simple-list li:after {
+    right: calc(16px + constant(safe-area-inset-right));
+    right: calc(16px + env(safe-area-inset-right));
   }
   .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a,
   .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .item-link.chevron-center .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item .chevron-center .item-link .item-inner {
-    padding-right: calc(42px + constant(safe-area-inset-right));
-    padding-right: calc(42px + env(safe-area-inset-right));
-  }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .item-link.no-chevron .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) .no-chevron .item-link .item-inner,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list.no-chevron a,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a.no-chevron,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list .no-chevron a {
     padding-right: calc(16px + constant(safe-area-inset-right));
     padding-right: calc(16px + env(safe-area-inset-right));
   }
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).media-list .no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge) li.media-item.no-chevron .item-link .item-title-row,
-  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row,
-  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).no-chevron li.media-item .item-link .item-title-row {
-    padding-right: 0;
+  .md.device-iphone-x .ios-right-edge .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .ios-edges .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .popup .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .sheet-modal .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after,
+  .md.device-iphone-x .panel-right .list:not(.inset):not(.tablet-inset):not(.no-ios-edges):not(.no-ios-right-edge).links-list a:after {
+    right: calc(16px + const(safe-area-inset-right));
+    right: calc(16px + env(safe-area-inset-right));
   }
 }
 @media (orientation: landscape) and (min-width: 768px) {
@@ -5641,10 +5644,10 @@ button {
   opacity: 0.8;
 }
 .ios .button i.icon:first-child {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .ios .button i.icon:last-child {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .ios .button i.icon:first-child:last-child {
   margin-left: 0;
@@ -5652,29 +5655,30 @@ button {
 }
 .ios .segmented .button {
   border-radius: 0;
-  border-left-width: 0;
+  border-right-width: 0;
 }
 .ios .segmented .button:first-child {
-  border-radius: 5px 0 0 5px;
-  border-left-width: 1px;
-  border-left-style: solid;
+  border-radius: 0 5px 5px 0;
+  border-right-width: 1px;
+  border-right-style: solid;
 }
 .ios .segmented .button:first-child.button-small {
-  border-left-width: 2px;
+  border-right-width: 2px;
 }
 .ios .segmented .button:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 0 0 5px;
 }
 .ios .segmented .button:first-child:last-child {
   border-radius: 5px;
 }
 .ios .segmented .button.button-round:first-child,
 .ios .segmented .button.button-round-ios:first-child {
-  border-radius: 29px 0 0 29px;
+  border-radius: 0 29px 29px 0;
 }
 .ios .segmented .button.button-round:last-child,
 .ios .segmented .button.button-round-ios:last-child {
   border-radius: 0 29px 29px 0;
+  border-radius: 29px 0 0 29px;
 }
 .ios .color-theme-red .button {
   border-color: #ff3b30;
@@ -6283,7 +6287,7 @@ button {
 .md .button > span:not(.ripple-wave) + span,
 .md .button > span:not(.ripple-wave) + i.icon,
 .md .button > i.icon + i.icon {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 .md .button.button-raised {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -6319,29 +6323,29 @@ button {
 .md .segmented .button {
   border-radius: 0;
   min-width: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .md .segmented .button:first-child {
-  border-radius: 4px 0 0 4px;
-  border-left: none;
+  border-radius: 0 4px 4px 0;
+  border-right: none;
 }
 .md .segmented .button.button-outline {
   border: 2px solid #2196f3;
 }
 .md .segmented .button.button-outline:nth-child(n + 2) {
-  border-left: none;
+  border-right: none;
 }
 .md .segmented .button:last-child {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px 0 0 4px;
 }
 .md .segmented .button:first-child:last-child {
   border-radius: 4px;
 }
 .md .segmented .button.button-round:first-child {
-  border-radius: 36px 0 0 36px;
+  border-radius: 0 36px 36px 0;
 }
 .md .segmented .button.button-round:last-child {
-  border-radius: 0 36px 36px 0;
+  border-radius: 36px 0 0 36px;
 }
 .md .theme-dark .button:not(.button-fill):not(.button-fill-md):not(.button-active):not(.tab-link-active).active-state {
   background-color: rgba(255, 255, 255, 0.1);
@@ -6914,12 +6918,12 @@ i.icon {
 .ios .icon-prev {
   width: 10px;
 }
-.ios .icon-back,
-.ios .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
-}
 .ios .icon-forward,
 .ios .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+}
+.ios .icon-back,
+.ios .icon-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .navbar .f7-icons,
@@ -6941,29 +6945,21 @@ i.icon {
 .ios .item-media .icon {
   color: #808080;
 }
-.ios .color-theme-red .icon-back,
-.ios .icon-back.color-red,
-.ios a.link.color-red .icon-back,
-.ios .color-theme-red .icon-prev,
-.ios .icon-prev.color-red,
-.ios a.link.color-red .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff3b30'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
-}
 .ios .color-theme-red .icon-forward,
 .ios .icon-forward.color-red,
 .ios a.link.color-red .icon-forward,
 .ios .color-theme-red .icon-next,
 .ios .icon-next.color-red,
 .ios a.link.color-red .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff3b30'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff3b30'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-green .icon-back,
-.ios .icon-back.color-green,
-.ios a.link.color-green .icon-back,
-.ios .color-theme-green .icon-prev,
-.ios .icon-prev.color-green,
-.ios a.link.color-green .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%234cd964'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-red .icon-back,
+.ios .icon-back.color-red,
+.ios a.link.color-red .icon-back,
+.ios .color-theme-red .icon-prev,
+.ios .icon-prev.color-red,
+.ios a.link.color-red .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff3b30'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-green .icon-forward,
 .ios .icon-forward.color-green,
@@ -6971,15 +6967,15 @@ i.icon {
 .ios .color-theme-green .icon-next,
 .ios .icon-next.color-green,
 .ios a.link.color-green .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%234cd964'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%234cd964'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-blue .icon-back,
-.ios .icon-back.color-blue,
-.ios a.link.color-blue .icon-back,
-.ios .color-theme-blue .icon-prev,
-.ios .icon-prev.color-blue,
-.ios a.link.color-blue .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-green .icon-back,
+.ios .icon-back.color-green,
+.ios a.link.color-green .icon-back,
+.ios .color-theme-green .icon-prev,
+.ios .icon-prev.color-green,
+.ios a.link.color-green .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%234cd964'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-blue .icon-forward,
 .ios .icon-forward.color-blue,
@@ -6987,15 +6983,15 @@ i.icon {
 .ios .color-theme-blue .icon-next,
 .ios .icon-next.color-blue,
 .ios a.link.color-blue .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-pink .icon-back,
-.ios .icon-back.color-pink,
-.ios a.link.color-pink .icon-back,
-.ios .color-theme-pink .icon-prev,
-.ios .icon-prev.color-pink,
-.ios a.link.color-pink .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff2d55'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-blue .icon-back,
+.ios .icon-back.color-blue,
+.ios a.link.color-blue .icon-back,
+.ios .color-theme-blue .icon-prev,
+.ios .icon-prev.color-blue,
+.ios a.link.color-blue .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-pink .icon-forward,
 .ios .icon-forward.color-pink,
@@ -7003,15 +6999,15 @@ i.icon {
 .ios .color-theme-pink .icon-next,
 .ios .icon-next.color-pink,
 .ios a.link.color-pink .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff2d55'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff2d55'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-yellow .icon-back,
-.ios .icon-back.color-yellow,
-.ios a.link.color-yellow .icon-back,
-.ios .color-theme-yellow .icon-prev,
-.ios .icon-prev.color-yellow,
-.ios a.link.color-yellow .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffcc00'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-pink .icon-back,
+.ios .icon-back.color-pink,
+.ios a.link.color-pink .icon-back,
+.ios .color-theme-pink .icon-prev,
+.ios .icon-prev.color-pink,
+.ios a.link.color-pink .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff2d55'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-yellow .icon-forward,
 .ios .icon-forward.color-yellow,
@@ -7019,15 +7015,15 @@ i.icon {
 .ios .color-theme-yellow .icon-next,
 .ios .icon-next.color-yellow,
 .ios a.link.color-yellow .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ffcc00'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffcc00'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-orange .icon-back,
-.ios .icon-back.color-orange,
-.ios a.link.color-orange .icon-back,
-.ios .color-theme-orange .icon-prev,
-.ios .icon-prev.color-orange,
-.ios a.link.color-orange .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff9500'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-yellow .icon-back,
+.ios .icon-back.color-yellow,
+.ios a.link.color-yellow .icon-back,
+.ios .color-theme-yellow .icon-prev,
+.ios .icon-prev.color-yellow,
+.ios a.link.color-yellow .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ffcc00'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-orange .icon-forward,
 .ios .icon-forward.color-orange,
@@ -7035,15 +7031,15 @@ i.icon {
 .ios .color-theme-orange .icon-next,
 .ios .icon-next.color-orange,
 .ios a.link.color-orange .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff9500'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ff9500'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-gray .icon-back,
-.ios .icon-back.color-gray,
-.ios a.link.color-gray .icon-back,
-.ios .color-theme-gray .icon-prev,
-.ios .icon-prev.color-gray,
-.ios a.link.color-gray .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%238e8e93'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-orange .icon-back,
+.ios .icon-back.color-orange,
+.ios a.link.color-orange .icon-back,
+.ios .color-theme-orange .icon-prev,
+.ios .icon-prev.color-orange,
+.ios a.link.color-orange .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ff9500'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-gray .icon-forward,
 .ios .icon-forward.color-gray,
@@ -7051,15 +7047,15 @@ i.icon {
 .ios .color-theme-gray .icon-next,
 .ios .icon-next.color-gray,
 .ios a.link.color-gray .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%238e8e93'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%238e8e93'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-white .icon-back,
-.ios .icon-back.color-white,
-.ios a.link.color-white .icon-back,
-.ios .color-theme-white .icon-prev,
-.ios .icon-prev.color-white,
-.ios a.link.color-white .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-gray .icon-back,
+.ios .icon-back.color-gray,
+.ios a.link.color-gray .icon-back,
+.ios .color-theme-gray .icon-prev,
+.ios .icon-prev.color-gray,
+.ios a.link.color-gray .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%238e8e93'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-white .icon-forward,
 .ios .icon-forward.color-white,
@@ -7067,15 +7063,15 @@ i.icon {
 .ios .color-theme-white .icon-next,
 .ios .icon-next.color-white,
 .ios a.link.color-white .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
-.ios .color-theme-black .icon-back,
-.ios .icon-back.color-black,
-.ios a.link.color-black .icon-back,
-.ios .color-theme-black .icon-prev,
-.ios .icon-prev.color-black,
-.ios a.link.color-black .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23000000'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+.ios .color-theme-white .icon-back,
+.ios .icon-back.color-white,
+.ios a.link.color-white .icon-back,
+.ios .color-theme-white .icon-prev,
+.ios .icon-prev.color-white,
+.ios a.link.color-white .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .color-theme-black .icon-forward,
 .ios .icon-forward.color-black,
@@ -7083,6 +7079,14 @@ i.icon {
 .ios .color-theme-black .icon-next,
 .ios .icon-next.color-black,
 .ios a.link.color-black .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23000000'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+}
+.ios .color-theme-black .icon-back,
+.ios .icon-back.color-black,
+.ios a.link.color-black .icon-back,
+.ios .color-theme-black .icon-prev,
+.ios .icon-prev.color-black,
+.ios a.link.color-black .icon-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23000000'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
 }
 .ios .icon.color-red {
@@ -7133,160 +7137,160 @@ i.icon {
   width: 24px;
   height: 24px;
 }
-.md .icon-back {
+.md .icon-forward {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-forward {
+.md .icon-back {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next {
+.md .icon-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-prev {
+.md .icon-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
-}
-.md .icon-back.color-red,
-.md a.link .color-red .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-red,
 .md a.link .color-red .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-red,
-.md a.link .color-red .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-red,
+.md a.link .color-red .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23f44336'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-red,
 .md a.link .color-red .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-green,
-.md a.link .color-green .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-red,
+.md a.link .color-red .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23f44336'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-green,
 .md a.link .color-green .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-green,
-.md a.link .color-green .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-green,
+.md a.link .color-green .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-green,
 .md a.link .color-green .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-blue,
-.md a.link .color-blue .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-green,
+.md a.link .color-green .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%234caf50'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-blue,
 .md a.link .color-blue .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-blue,
-.md a.link .color-blue .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-blue,
+.md a.link .color-blue .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%232196f3'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-blue,
 .md a.link .color-blue .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-pink,
-.md a.link .color-pink .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-blue,
+.md a.link .color-blue .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%232196f3'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-pink,
 .md a.link .color-pink .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-pink,
-.md a.link .color-pink .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-pink,
+.md a.link .color-pink .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23e91e63'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-pink,
 .md a.link .color-pink .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-yellow,
-.md a.link .color-yellow .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-pink,
+.md a.link .color-pink .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23e91e63'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-yellow,
 .md a.link .color-yellow .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-yellow,
-.md a.link .color-yellow .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-yellow,
+.md a.link .color-yellow .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffeb3b'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-yellow,
 .md a.link .color-yellow .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-orange,
-.md a.link .color-orange .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-yellow,
+.md a.link .color-yellow .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffeb3b'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-orange,
 .md a.link .color-orange .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-orange,
-.md a.link .color-orange .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-orange,
+.md a.link .color-orange .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ff9800'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-orange,
 .md a.link .color-orange .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-gray,
-.md a.link .color-gray .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-orange,
+.md a.link .color-orange .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ff9800'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-gray,
 .md a.link .color-gray .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-gray,
-.md a.link .color-gray .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-gray,
+.md a.link .color-gray .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%239e9e9e'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-gray,
 .md a.link .color-gray .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-white,
-.md a.link .color-white .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-gray,
+.md a.link .color-gray .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%239e9e9e'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-white,
 .md a.link .color-white .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-white,
-.md a.link .color-white .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-white,
+.md a.link .color-white .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-white,
 .md a.link .color-white .icon-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-back.color-black,
-.md a.link .color-black .icon-back {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+.md .icon-next.color-white,
+.md a.link .color-white .icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23ffffff'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-forward.color-black,
 .md a.link .color-black .icon-forward {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M20%2011H7.83l5.59-5.59L12%204l-8%208%208%208%201.41-1.41L7.83%2013H20v-2z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
-.md .icon-next.color-black,
-.md a.link .color-black .icon-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+.md .icon-back.color-black,
+.md a.link .color-black .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%204l-1.41%201.41L16.17%2011H4v2h12.17l-5.58%205.59L12%2020l8-8z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon-prev.color-black,
 .md a.link .color-black .icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+}
+.md .icon-next.color-black,
+.md a.link .color-black .icon-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20fill%3D'%23000000'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
 }
 .md .icon.color-red {
