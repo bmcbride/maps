@@ -47,30 +47,12 @@ app = new Framework7({
           app.geolocation.setTracking(true);
           if (app.activeLayer) {
             app.functions.setMap(app.activeLayer.toString());  
-          } else if (sessionStorage.getItem("settings")) {
-            var settings = JSON.parse(sessionStorage.getItem("settings"));
-            app.functions.setMap(settings.activeLayer, settings);
-            if (settings.basemap) {
-              $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
-            }
           }
         }
       }
     }
   }],
   on: {
-    init: function() {
-      app.functions.iosChecks();
-      app.functions.loadSavedMaps();
-      app.functions.loadAvailableMaps();
-      if (window.location.hash.substr(2) == "/map/") {
-        if (!sessionStorage.getItem("settings")) {
-          setTimeout(function() {
-            app.views.main.router.back();
-          }, 300);
-        }
-      }
-    },
     sortableEnable: function(listEl) {
       $$("#sort-icon").html("save");
     },
@@ -704,5 +686,26 @@ $$(document).on("taphold", ".saved-map", function(e) {
 $$(".ptr-content").on("ptr:refresh", function (e) {
   app.functions.loadAvailableMaps();
 });
+
+app.on("init", function() {
+  app.functions.iosChecks();
+  app.functions.loadSavedMaps();
+  app.functions.loadAvailableMaps();
+  if (app.views.current.router.currentRoute.url == "/map/") {
+    if (sessionStorage.getItem("settings")) {
+      $$("#gps-btn").removeClass("disabled");
+      app.geolocation.setTracking(true);
+      var settings = JSON.parse(sessionStorage.getItem("settings"));
+      app.functions.setMap(settings.activeLayer, settings);
+      if (settings.basemap) {
+        $$("input[type=radio][name=basemap][value='" + settings.basemap + "']").prop("checked", true).trigger("change");
+      }
+    }
+    else {
+      app.preloader.hide();
+      app.views.current.router.back();
+    }
+  }
+})
 
 app.init();
