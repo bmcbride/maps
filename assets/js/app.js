@@ -366,6 +366,10 @@ app.functions = {
               </a>
             </li>`;
             $$("#map-list").append(li);
+            if (app.utils.parseUrlQuery(document.URL).map && (map[i].name == app.utils.parseUrlQuery(document.URL).map)) {
+              app.functions.saveMap(map[i]);
+              window.history.replaceState(null, null, window.location.pathname);
+            }
           }
           app.ptr.done();
         },
@@ -508,7 +512,7 @@ app.functions = {
 
   saveMap: function(config) {
     if (navigator.onLine) {
-      app.dialog.confirm("Save <b>" + config.name + "</b> to your device?", "Confirm", function() {
+      app.dialog.confirm("Save <b>" + config.name + "</b> map to your device?", "Confirm", function() {
         app.dialog.progress("Downloading map...");
   
         app.request({
