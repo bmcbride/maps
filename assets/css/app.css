@@ -59,3 +59,9 @@
 .list {
   margin: 0px!important;
 }
+
+@media screen and (max-device-width: 320px) and (orientation: portrait){
+  .navbar .title {
+    font-size: 17px;
+  }
+}
