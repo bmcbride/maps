@@ -337,12 +337,11 @@ app.functions = {
   loadAvailableMaps() {
     if (navigator.onLine) {
       $$("#map-list").empty();
-      if (app.utils.parseUrlQuery(document.URL).config) {
-        localStorage.setItem("mapConfig", app.utils.parseUrlQuery(document.URL).config);
-        window.history.replaceState(null, null, window.location.pathname);
+      if (app.utils.parseUrlQuery(document.URL).collection) {
+        localStorage.setItem("mapCollection", app.utils.parseUrlQuery(document.URL).collection);
       }
       app.request({
-        url: localStorage.getItem("mapConfig") ? localStorage.getItem("mapConfig") : "maps.json",
+        url: localStorage.getItem("mapCollection") ? localStorage.getItem("mapCollection") : "maps.json",
         method: "GET",
         dataType: "json",
         cache: false,
@@ -351,7 +350,8 @@ app.functions = {
             return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;
           });
           for (var i = 0; i < map.length; i++) {
-            var config = JSON.stringify(map[i]);
+            // var config = JSON.stringify(map[i]);
+            var config = JSON.stringify(map[i]).replace(/'/g, "&apos;");
             var li = `<li>
               <a href="#" class="item-link item-content no-chevron" onclick='app.functions.saveMap(${config});'>
                 <div class="item-inner">
@@ -368,7 +368,6 @@ app.functions = {
             $$("#map-list").append(li);
             if (app.utils.parseUrlQuery(document.URL).map && (map[i].name == app.utils.parseUrlQuery(document.URL).map)) {
               app.functions.saveMap(map[i]);
-              window.history.replaceState(null, null, window.location.pathname);
             }
           }
           app.ptr.done();
@@ -376,6 +375,9 @@ app.functions = {
         error: function (xhr, status) {
           app.dialog.alert(xhr.statusText, "Map List Error");
           app.ptr.done();
+        },
+        complete: function (xhr, status) {
+          window.history.replaceState(null, null, window.location.pathname);
         }
       });
     } else {
@@ -512,7 +514,7 @@ app.functions = {
 
   saveMap: function(config) {
     if (navigator.onLine) {
-      app.dialog.confirm("Save <b>" + config.name + "</b> map to your device?", "Confirm", function() {
+      app.dialog.confirm("Save <b>" + config.name + "</b> map to your device?", null, function() {
         app.dialog.progress("Downloading map...");
   
         app.request({
@@ -553,7 +555,7 @@ app.functions = {
   },
 
   deleteMap: function(key) {
-    app.dialog.confirm("Are you sure you want to remove this map from your device?", "Remove map", function() {
+    app.dialog.confirm("Are you sure you want to remove this map from your device?", null, function() {
       sessionStorage.removeItem("settings");
       app.mapStore.removeItem(key).then(function () {
         app.functions.loadSavedMaps();
@@ -562,7 +564,7 @@ app.functions = {
   },
 
   deleteAllMaps: function(){
-    app.dialog.confirm("Are you sure you want to remove all saved maps from your device?", "Remove saved maps", function() {
+    app.dialog.confirm("Are you sure you want to remove all saved maps from your device?", null, function() {
       sessionStorage.removeItem("settings");
       localStorage.removeItem("dismissPrompt");
       app.mapStore.clear().then(function() {
@@ -571,15 +573,15 @@ app.functions = {
     });
   },
 
-  setMapConfig() {
+  setMapCollection() {
     app.dialog.create({
-      title: "Maps source",
-      content: '<div class="dialog-input-field item-input"><div class="item-input-wrap"><input id="maps-url" type="text" class="dialog-input" onClick="this.select();"></div></div>',
+      title: "Map collection source",
+      content: '<div class="padding-top dialog-input-field item-input"><div class="item-input-wrap"><input id="maps-url" type="text" class="dialog-input" onClick="this.select();"></div></div>',
       closeByBackdropClick: true,
       buttons: [{
           text: "Reset",
           onClick: function(dialog, e) {
-            localStorage.setItem("mapConfig", "maps.json");
+            localStorage.setItem("mapCollection", "maps.json");
             app.functions.loadAvailableMaps();
           }
         }, {
@@ -588,9 +590,9 @@ app.functions = {
           onClick: function(dialog, e) {
             url = $$("#maps-url").val();
             if (url) {
-              localStorage.setItem("mapConfig", url);
+              localStorage.setItem("mapCollection", url);
             } else {
-              localStorage.removeItem("mapConfig");
+              localStorage.removeItem("mapCollection");
             }
             app.functions.loadAvailableMaps();
           }
@@ -598,8 +600,8 @@ app.functions = {
       ],
       on: {
         opened: function() {
-          if (localStorage.getItem("mapConfig")) {
-            $$("#maps-url").val(localStorage.getItem("mapConfig"));
+          if (localStorage.getItem("mapCollection")) {
+            $$("#maps-url").val(localStorage.getItem("mapCollection"));
           } else {
             $$("#maps-url").val("maps.json");
           }
